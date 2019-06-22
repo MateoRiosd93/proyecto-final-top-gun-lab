@@ -4,7 +4,7 @@
     border-radius: 30px;
 
     width: 320px;
-    height: 350px;
+    height: 200px;
 
     display: flex;
     flex-direction: column;
@@ -16,5 +16,4 @@
 
 .img-element{
 
-    border: 1px solid red;
 }

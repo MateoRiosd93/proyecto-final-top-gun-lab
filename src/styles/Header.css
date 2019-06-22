@@ -1,4 +1,5 @@
 .navbar{
+    padding: 0.6rem;
     background:#253746;
     width: 100%;
     display: flex;
@@ -18,6 +19,12 @@
     text-decoration: none;
     color: white;
     font-family: 'Open Sans';
+    font-weight: bold;
+}
+
+.nav_link:hover{
+    color:  #62E52C;
+    transition: 0.5s;
 }
 
 .menu_responsive{
