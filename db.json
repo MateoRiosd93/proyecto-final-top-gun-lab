@@ -1,0 +1,232 @@
+{
+  "employees": [{
+      "id": 1,
+      "name": "elliot watts",
+      "job": "Bussiness Representative",
+      "area": "Development",
+      "imgSrc": "https://randomuser.me/api/portraits/men/36.jpg",
+      "points": 9
+  }, {
+      "id": 2,
+      "name": "freddie jenkins",
+      "job": "Bussiness Representative",
+      "area": "Sales",
+      "imgSrc": "https://randomuser.me/api/portraits/men/53.jpg",
+      "points": 9
+  }, {
+      "id": 3,
+      "name": "amelia lavoie",
+      "job": "Bussiness Analist",
+      "area": "Sales",
+      "imgSrc": "https://randomuser.me/api/portraits/women/67.jpg",
+      "points": 7
+  }, {
+      "id": 4,
+      "name": "minea hautala",
+      "job": "Recruiter",
+      "area": "Human Resources",
+      "imgSrc": "https://randomuser.me/api/portraits/women/96.jpg",
+      "points": 1
+  }, {
+      "id": 5,
+      "name": "felix carroll",
+      "job": "Bussiness Analist",
+      "area": "English",
+      "imgSrc": "https://randomuser.me/api/portraits/men/59.jpg",
+      "points": 8
+  }, {
+      "id": 6,
+      "name": "elmer williams",
+      "job": "Back End Developer",
+      "area": "Marketing",
+      "imgSrc": "https://randomuser.me/api/portraits/men/21.jpg",
+      "points": 4
+  }, {
+      "id": 7,
+      "name": "mercedes gomez",
+      "job": "Bussiness Representative",
+      "area": "English",
+      "imgSrc": "https://randomuser.me/api/portraits/women/6.jpg",
+      "points": 4
+  }, {
+      "id": 8,
+      "name": "freja møller",
+      "job": "Back End Developer",
+      "area": "Marketing",
+      "imgSrc": "https://randomuser.me/api/portraits/women/54.jpg",
+      "points": 4
+  }, {
+      "id": 9,
+      "name": "veera huhta",
+      "job": "Bussiness Representative",
+      "area": "Sales",
+      "imgSrc": "https://randomuser.me/api/portraits/women/79.jpg",
+      "points": 8
+  }, {
+      "id": 10,
+      "name": "Adrian Serna",
+      "job": "Recruiter",
+      "area": "Sales",
+      "imgSrc": "https://randomuser.me/api/portraits/men/39.jpg",
+      "points": 8
+  }, {
+      "id": 11,
+      "name": "kurt hernandez",
+      "job": "Full Stack Developer",
+      "area": "Human Resources",
+      "imgSrc": "https://randomuser.me/api/portraits/men/34.jpg",
+      "points": 5
+  }, {
+      "id": 12,
+      "name": "yoëlla balfoort",
+      "job": "QA",
+      "area": "Sales",
+      "imgSrc": "https://randomuser.me/api/portraits/women/8.jpg",
+      "points": 5
+  }, {
+      "id": 13,
+      "name": "fortunato nunes",
+      "job": "Operations Manager",
+      "area": "Sales",
+      "imgSrc": "https://randomuser.me/api/portraits/men/65.jpg",
+      "points": 0
+  }, {
+      "id": 14,
+      "name": "anthony kelly",
+      "job": "Full Stack Developer",
+      "area": "Marketing",
+      "imgSrc": "https://randomuser.me/api/portraits/men/62.jpg",
+      "points": 9
+  }, {
+      "id": 15,
+      "name": "gloria schweizer",
+      "job": "Operations Manager",
+      "area": "Sales",
+      "imgSrc": "https://randomuser.me/api/portraits/women/44.jpg",
+      "points": 1
+  }],
+  "prizes": [{
+      "id": 1,
+      "name": "Play Station game",
+      "points": 1,
+      "imgSrc": "https://top-gun-lab-images.s3-sa-east-1.amazonaws.com/steam.png",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis iusto voluptas earum maiores quisquam ipsum"
+  }, {
+      "id": 2,
+      "name": "Spa day",
+      "points": 1,
+      "imgSrc": "https://top-gun-lab-images.s3-sa-east-1.amazonaws.com/spa.png",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis iusto voluptas earum maiores quisquam ipsum"
+  }, {
+      "id": 3,
+      "name": "Earbugs",
+      "points": 3,
+      "imgSrc": "https://top-gun-lab-images.s3-sa-east-1.amazonaws.com/earbugs.png",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis iusto voluptas earum maiores quisquam ipsum"
+  }, {
+      "id": 4,
+      "name": "Hotel night",
+      "points": 3,
+      "imgSrc": "https://top-gun-lab-images.s3-sa-east-1.amazonaws.com/hotel.png",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis iusto voluptas earum maiores quisquam ipsum"
+  }, {
+      "id": 5,
+      "name": "Kindle",
+      "points": 5,
+      "imgSrc": "https://top-gun-lab-images.s3-sa-east-1.amazonaws.com/kindle.png",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis iusto voluptas earum maiores quisquam ipsum"
+  }, {
+      "id": 6,
+      "name": "Phone",
+      "points": 8,
+      "imgSrc": "https://top-gun-lab-images.s3-sa-east-1.amazonaws.com/phone.png",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis iusto voluptas earum maiores quisquam ipsum"
+  }, {
+      "id": 7,
+      "name": "Watch",
+      "points": 8,
+      "imgSrc": "https://top-gun-lab-images.s3-sa-east-1.amazonaws.com/watch.png",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis iusto voluptas earum maiores quisquam ipsum"
+  }],
+  "avhievements": [{
+      "id": 1,
+      "name": "Teamniversary (1)",
+      "points": 2
+  }, {
+      "id": 2,
+      "name": "Teamniversary (2)",
+      "points": 3
+  }, {
+      "id": 3,
+      "name": "Teamniversary (3)",
+      "points": 4
+  }, {
+      "id": 4,
+      "name": "Teamniversary (5+)",
+      "points": 8
+  }, {
+      "id": 5,
+      "name": "Teamniversary (10+)",
+      "points": 20
+  }, {
+      "id": 6,
+      "name": "Team Promotion",
+      "points": 4
+  }, {
+      "id": 7,
+      "name": "Lead Top Gun Lab training (per class)",
+      "points": 1
+  }, {
+      "id": 8,
+      "name": "Lead Internal Training (Tech/Team Talks)",
+      "points": 1
+  }, {
+      "id": 9,
+      "name": "Recruitment Support (per precess)",
+      "points": 1
+  }, {
+      "id": 10,
+      "name": "Client Kudos",
+      "points": 1
+  }, {
+      "id": 11,
+      "name": "Teammates Kudos",
+      "points": 1
+  }, {
+      "id": 12,
+      "name": "Team Award",
+      "points": 2
+  }, {
+      "id": 13,
+      "name": "English Level Achievement",
+      "points": 2
+  }, {
+      "id": 14,
+      "name": "Certification Achievement",
+      "points": 2
+  }, {
+      "id": 15,
+      "name": "Speaking in external conferences and meet ups (per event)",
+      "points": 4
+  }, {
+      "id": 16,
+      "name": "Representing the company in external activities and contests (per event)",
+      "points": 1
+  }, {
+      "id": 17,
+      "name": "Pre-sales participation",
+      "points": 2
+  }, {
+      "id": 18,
+      "name": "Mentoring New commers (per new customer)",
+      "points": 2
+  }, {
+      "id": 19,
+      "name": "Social Media Participation (post)",
+      "points": 1
+  }, {
+      "id": 20,
+      "name": "Social Media Participation (written content)",
+      "points": 2
+  }]
+}

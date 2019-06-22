@@ -1,5 +1,5 @@
 .navbar{
-    background: tomato;
+    background:#253746;
     width: 100%;
     padding: 10px 70px;
     display: flex;
@@ -8,10 +8,20 @@
 
 .nav_list{
     list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .nav_link{
+    padding: 0.5rem;
+    margin: 0.5rem;
     text-decoration: none;
     color: white;
+    font-family: 'Open Sans';
+}
+
+.menu_responsive{
+    border: 1px solid white;
 }
 

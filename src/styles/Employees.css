@@ -1,0 +1,7 @@
+.div-employees{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    background: rgb(53,205,64);
+}
