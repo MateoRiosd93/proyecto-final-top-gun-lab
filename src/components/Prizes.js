@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react'
 
-const Prizes = () => {
-    return ( 
+class Prizes extends Component {
 
-        <p>From Prizes</p>
-     );
+    state = {
+        pirzes: []
+    }
+
+    componentDidMount 
+
+
+    render() {
+        return (
+            <div>
+                
+            </div>
+        )
+    }
 }
- 
+
+
 export default Prizes;
