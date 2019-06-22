@@ -1,10 +1,10 @@
 import React from 'react';
 
-import '../styles/Mostrar.css';
+import '../styles/ShowEmployees.css';
 
-export default function Mostrar({name,imgSrc,points}) {
+export default function ShowEmployees ({name,imgSrc,points}) {
     return (
-        <div className="div-employee">
+        <div className="container-employee">
             <p className="name-employee">{name}</p>
             <img className="img-employee" src={imgSrc} alt=""/>
             <p className="points-employee">{points}</p>
