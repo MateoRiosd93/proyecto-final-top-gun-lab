@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import ShowEmployees from './ShowEmployees';
+import ShowElements from './ShowElements';
+import Search from './Search';
 import { BASE_LOCAL_ENDPOINT } from '../constants';
 import axios from 'axios';
 
@@ -32,22 +33,19 @@ class Employees extends Component {
     render() {
         const {employees} = this.state;
         return (
-            <div className="div-employees">
-                <form action="">
-                    <div>
-                        <label htmlFor=""></label>
-                        <input type="text" placeholder="Search"/>
-                    </div>
-                </form>
+            <div className="container-employees">
+                <Search />
+                <div className="container-elements">
                 {
                     employees.map(({id,name,imgSrc,points}) =>
-                        <ShowEmployees
+                        <ShowElements
                             key={id}
                             name={name}
                             imgSrc={imgSrc}
                             points={points}/>
                      )
                 }
+                </div>
             </div>
         )
     }
