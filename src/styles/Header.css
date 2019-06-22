@@ -1,7 +1,6 @@
 .navbar{
     background:#253746;
     width: 100%;
-    padding: 10px 70px;
     display: flex;
     justify-content: space-between;
 }

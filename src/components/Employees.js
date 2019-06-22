@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Mostrar from './Mostrar';
+import ShowEmployees from './ShowEmployees';
 import { BASE_LOCAL_ENDPOINT } from '../constants';
 import axios from 'axios';
 
@@ -11,26 +11,7 @@ class Employees extends Component {
         isLoad: false
     }
 
-    // getEmployeesBD = () => {
-    //     console.log('consumiendo employees')
-    //     console.log(BASE_LOCAL_ENDPOINT)
-    //     axios.get(`${BASE_LOCAL_ENDPOINT}/employees`)
-    //     .then(response => {
-    //         this.setState({
-    //             employees : response.employees
-    //         })
-    //         console.log();
-    //     })
-    //     .catch(error => {
-    //         this.setState({
-    //             isLoad : true
-    //         })
-    //     });
-    // }
-
-    componentDidMount () {
-        console.log('componentWillMount')
-        // this.getEmployeesBD();
+    getEmployeesBD = () => {
         axios.get(`${BASE_LOCAL_ENDPOINT}/employees`)
         .then(response => {
             this.setState({
@@ -44,13 +25,23 @@ class Employees extends Component {
         });
     }
 
+    componentDidMount () {
+        this.getEmployeesBD();
+    }
+
     render() {
         const {employees} = this.state;
         return (
             <div className="div-employees">
+                <form action="">
+                    <div>
+                        <label htmlFor=""></label>
+                        <input type="text" placeholder="Search"/>
+                    </div>
+                </form>
                 {
                     employees.map(({id,name,imgSrc,points}) =>
-                        <Mostrar
+                        <ShowEmployees
                             key={id}
                             name={name}
                             imgSrc={imgSrc}
