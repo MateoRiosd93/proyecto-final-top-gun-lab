@@ -3,7 +3,7 @@ import {BASE_LOCAL_ENDPOINT} from '../constants';
 import Search from './Search';
 import ShowElements from './ShowElements';
 import axios from 'axios';
-import '../styles/Employees.css';
+import '../styles/Prizes.css';
 
 class Prizes extends Component {
 
@@ -37,7 +37,7 @@ class Prizes extends Component {
     render() {
         const {prizes} = this.state
         return (
-            <div className="container-employees">
+            <div className="container-prizes">
                 <Search/>
                 <div className="container-elements">
                     {

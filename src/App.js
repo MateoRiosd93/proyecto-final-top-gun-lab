@@ -17,13 +17,13 @@ function App() {
         <Header/>
         <Switch>
           <Route exact path="/employees" component={Employees}/>
-          <Route exact path="/" render={() => (
-                                <Redirect to="/employes"/>
-          )}/>
           <Route exact path="/employees/:id" component={Employee}/>
           <Route exact path="/prizes" component={Prizes}/>
           <Route exact path="/prizes/:id" component={Prize}/>
           <Route exact path="/achivements" component={Achivements}/>
+          <Route exact path="/" render={() => (
+                                <Redirect to="/employees"/>
+          )}/>
         </Switch>
       </HashRouter>
     );
