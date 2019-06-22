@@ -22,12 +22,12 @@ const Header = () => {
             className="nav_link"
             activeClassName="active"
           >
-            Employees
+            EMPLOYEES
           </NavLink>
         </li>
         <li className="nav_list-item">
           <NavLink to="/prizes" className="nav_link" activeClassName="active">
-            Prizes
+            PRIZES
           </NavLink>
         </li>
         <li className="nav_list-item">
@@ -36,7 +36,7 @@ const Header = () => {
             className="nav_link"
             activeClassName="active"
           >
-            Achivements
+            ACHIVEMENTS
           </NavLink>
         </li>
       </ul>
