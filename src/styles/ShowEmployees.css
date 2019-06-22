@@ -4,7 +4,7 @@
     border-radius: 30px;
 
     width: 320px;
-    height: 250px;
+    height: 350px;
 
     display: flex;
     flex-direction: column;
@@ -12,4 +12,9 @@
     align-items: center;
 
     font-family: 'Open Sans', sans-serif;
+}
+
+.img-element{
+
+    border: 1px solid red;
 }
