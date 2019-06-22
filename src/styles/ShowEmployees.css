@@ -1,7 +1,10 @@
-.container-employee{
+.container-element{
     margin: 0.5rem;
     border: 1px solid black;
     border-radius: 30px;
+
+    width: 320px;
+    height: 250px;
 
     display: flex;
     flex-direction: column;
