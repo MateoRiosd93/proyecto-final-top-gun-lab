@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React from 'react';
 import "../styles/Header.css";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/menu.svg";
@@ -15,11 +15,7 @@ const Header = () => {
           />
         </NavLink>
       </div>
-
-      <div className="menu_responsive" /*onClick={(e) => handleChangeFlag(e)}*/ >
-        <img src={logo} alt="menu responsive" />
-      </div>
- <ul className="nav_list">
+      <ul className="nav_list">
         <li className="nav_list-item">
           <NavLink
             to="/employees"
@@ -44,6 +40,9 @@ const Header = () => {
           </NavLink>
         </li>
       </ul>
+      <div className="menu_responsive" /*onClick={(e) => handleChangeFlag(e)}*/ >
+        <img src={logo} alt="menu responsive" />
+      </div>
     </nav>
   );
 };
