@@ -1,10 +1,9 @@
 .container-element{
     margin: 0.5rem;
     border: 1px solid black;
-    border-radius: 30px;
+    border-radius: 12px;
+    background: whitesmoke;
 
-    width: 320px;
-    height: 200px;
 
     display: flex;
     flex-direction: column;
@@ -14,6 +13,13 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-.img-element{
+.name-element{
+    width: 100%;
+    text-align: center;
+}
 
+.img-element{
+    width: 320px;
+    height: 200px;
+    padding: 20px;
 }

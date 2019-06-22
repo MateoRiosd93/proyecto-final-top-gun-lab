@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import {BASE_LOCAL_ENDPOINT} from '../constants';
+import Search from './Search';
+import ShowElements from './ShowElements';
 import axios from 'axios';
+import '../styles/Employees.css';
 
 class Prizes extends Component {
 
     state = {
-        pirzes: [],
+        prizes: [],
         error: false
     }
 
@@ -13,11 +16,10 @@ class Prizes extends Component {
     getPrizesDB = () => {
         axios.get(`${BASE_LOCAL_ENDPOINT}/prizes`)
         .then(response => {
-            console.log(response)
-            
-            // this.setState({
-            //     pirzes: response.data
-            // })
+            console.log(response.data)
+            this.setState({
+                prizes: response.data
+             })
         })
         .catch(error => {
             this.setState({
@@ -28,14 +30,27 @@ class Prizes extends Component {
 
 
     componentDidMount = () => {
-
+        this.getPrizesDB();
     }
 
 
     render() {
+        const {prizes} = this.state
         return (
-            <div>
-                
+            <div className="container-employees">
+                <Search/>
+                <div className="container-elements">
+                    {
+                        prizes.map(({id, name, points, imgSrc }) =>
+                                    <ShowElements
+                                    key={id}
+                                    name={name}
+                                    imgSrc={imgSrc}
+                                    points={points}
+                                    />
+                                  )
+                    }
+                </div>
             </div>
         )
     }

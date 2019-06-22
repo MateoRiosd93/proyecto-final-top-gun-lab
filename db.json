@@ -148,7 +148,7 @@
       "imgSrc": "https://top-gun-lab-images.s3-sa-east-1.amazonaws.com/watch.png",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis iusto voluptas earum maiores quisquam ipsum"
   }],
-  "avhievements": [{
+  "achievements": [{
       "id": 1,
       "name": "Teamniversary (1)",
       "points": 2
