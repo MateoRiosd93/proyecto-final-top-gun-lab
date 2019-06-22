@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function header() {
+export default function Footer() {
     return (
         <div>
-            <h1>Hola mundo</h1>
+            <p>Footer de la app</p>
         </div>
     )
 }

@@ -1,0 +1,33 @@
+.navbar{
+    padding: 0.6rem;
+    background:#253746;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_list{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav_link{
+    padding: 0.5rem;
+    margin: 0.5rem;
+    text-decoration: none;
+    color: white;
+    font-family: 'Open Sans';
+    font-weight: bold;
+}
+
+.nav_link:hover{
+    color:  #62E52C;
+    transition: 0.5s;
+}
+
+.menu_responsive{
+    border: 1px solid white;
+}
+

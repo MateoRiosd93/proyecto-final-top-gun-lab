@@ -1,0 +1,18 @@
+*{
+	box-sizing: border-box;
+}
+
+html, body{
+	width: 100%;
+	height: 100vh;
+  	margin: 0;
+	  padding: 0;
+}
+
+:root{
+
+	--greenColor : #62E52C;
+	--grayColor: #253746;
+
+	--font: 'Open Sans', sans-serif;
+}
