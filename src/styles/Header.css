@@ -1,0 +1,17 @@
+.navbar{
+    background: tomato;
+    width: 100%;
+    padding: 10px 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_list{
+    list-style: none;
+}
+
+.nav_link{
+    text-decoration: none;
+    color: white;
+}
+
