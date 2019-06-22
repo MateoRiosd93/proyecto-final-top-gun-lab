@@ -1,14 +1,14 @@
 import React from 'react';
 import "../styles/Header.css";
 import { NavLink } from "react-router-dom";
-import logo from "../assets/menu.svg";
+// import logo from "../assets/menu.svg";
 
 const Header = () => {
 
   return (
     <nav className="navbar">
       <div className="container_logo">
-        <NavLink to="/" className="nav_link">
+        <NavLink to="/employees" className="nav_link">
           <img
             src="https://www.teaminternational.com/wp-content/uploads/2019/05/new-web-logo-team-international.png"
             alt=""
@@ -40,9 +40,9 @@ const Header = () => {
           </NavLink>
         </li>
       </ul>
-      <div className="menu_responsive" /*onClick={(e) => handleChangeFlag(e)}*/ >
+     {/* <div className="menu_responsive" onClick={(e) => handleChangeFlag(e)} >
         <img src={logo} alt="menu responsive" />
-      </div>
+      </div> */}
     </nav>
   );
 };
