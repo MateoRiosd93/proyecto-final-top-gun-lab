@@ -3,6 +3,7 @@ import ShowElements from './ShowElements';
 import Search from './Search';
 import { BASE_LOCAL_ENDPOINT } from '../constants';
 import axios from 'axios';
+import { NavLink } from 'react-router-dom';
 
 import '../styles/Employees.css';
 
@@ -16,9 +17,12 @@ class Employees extends Component {
     getEmployeesBD = () => {
         axios.get(`${BASE_LOCAL_ENDPOINT}/employees`)
         .then(response => {
+            const employees = response.data.sort((elemento1,elemento2) => elemento2.points - elemento1.points);
+            console.log(employees);
             this.setState({
-                employees : response.data
+                employees
             })
+
         })
         .catch(error => {
             this.setState({
@@ -47,11 +51,13 @@ class Employees extends Component {
                 <div className="container-elements">
                 {
                     employeesFilter.map(({id,name,imgSrc,points}) =>
+                    <NavLink key={id} to={`/employees/${id}`}>
                         <ShowElements
                             key={id}
                             name={name}
                             imgSrc={imgSrc}
                             points={points}/>
+                    </NavLink>
                      )
                 }
                 </div>
