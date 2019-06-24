@@ -13,19 +13,21 @@ import './styles/App.css';
 function App() {
 
     return (
-      <HashRouter>
-        <Header/>
-        <Switch>
-          <Route exact path="/employees" component={Employees}/>
-          <Route exact path="/employees/:id" component={Employee}/>
-          <Route exact path="/prizes" component={Prizes}/>
-          <Route exact path="/prizes/:id" component={Prize}/>
-          <Route exact path="/achivements" component={Achivements}/>
-          <Route exact path="/" render={() => (
-                                <Redirect to="/employees"/>
-          )}/>
-        </Switch>
-      </HashRouter>
+      <div className="container-app">
+        <HashRouter>
+          <Header/>
+          <Switch>
+            <Route exact path="/employees" component={Employees}/>
+            <Route exact path="/employees/:id" component={Employee}/>
+            <Route exact path="/prizes" component={Prizes}/>
+            <Route exact path="/prizes/:id" component={Prize}/>
+            <Route exact path="/achivements" component={Achivements}/>
+            <Route exact path="/" render={() => (
+                                  <Redirect to="/employees"/>
+            )}/>
+          </Switch>
+        </HashRouter>
+      </div>
     );
 }
 

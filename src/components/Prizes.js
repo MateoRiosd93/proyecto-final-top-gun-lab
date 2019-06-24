@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {BASE_LOCAL_ENDPOINT} from '../constants';
+import { NavLink } from 'react-router-dom';
 import Search from './Search';
 import ShowElements from './ShowElements';
 import axios from 'axios';
@@ -17,7 +18,6 @@ class Prizes extends Component {
     getPrizesDB = () => {
         axios.get(`${BASE_LOCAL_ENDPOINT}/prizes`)
         .then(response => {
-            console.log(response.data)
             this.setState({
                 prizes: response.data
              })
@@ -50,13 +50,15 @@ class Prizes extends Component {
                 <div className="container-elements">
                     {
                         prizesFilter.map(({id, name, points, imgSrc }) =>
-                                    <ShowElements
+                            <NavLink key={id} to={`/prizes/${id}`}>
+                                <ShowElements
                                     key={id}
                                     name={name}
                                     imgSrc={imgSrc}
                                     points={points}
                                     />
-                                  )
+                            </NavLink>
+                        )
                     }
                 </div>
             </div>
