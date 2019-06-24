@@ -9,7 +9,8 @@ import '../styles/Employees.css';
 class Employees extends Component {
     state = {
         employees : [],
-        isLoad: false
+        isLoad: false,
+        searchName:''
     }
 
     getEmployeesBD = () => {
@@ -30,14 +31,22 @@ class Employees extends Component {
         this.getEmployeesBD();
     }
 
+    searchNames = letter => {
+        const searchName = letter;
+        this.setState({
+            searchName
+        })
+    }
+
     render() {
-        const {employees} = this.state;
+        const {employees,searchName} = this.state;
+        const employeesFilter = employees.filter(employee => employee.name.toLowerCase().includes(searchName.toLowerCase()));
         return (
             <div className="container-employees">
-                <Search />
+                <Search searchNames={this.searchNames}/>
                 <div className="container-elements">
                 {
-                    employees.map(({id,name,imgSrc,points}) =>
+                    employeesFilter.map(({id,name,imgSrc,points}) =>
                         <ShowElements
                             key={id}
                             name={name}

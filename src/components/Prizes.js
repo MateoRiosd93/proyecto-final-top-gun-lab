@@ -9,7 +9,8 @@ class Prizes extends Component {
 
     state = {
         prizes: [],
-        error: false
+        error: false,
+        searchName:''
     }
 
 
@@ -33,15 +34,22 @@ class Prizes extends Component {
         this.getPrizesDB();
     }
 
+    searchNames = letter => {
+        const searchName = letter;
+        this.setState({
+            searchName
+        })
+    }
 
     render() {
-        const {prizes} = this.state
+        const {prizes,searchName} = this.state;
+        const prizesFilter = prizes.filter(prize => prize.name.toLowerCase().includes(searchName.toLowerCase()));
         return (
             <div className="container-prizes">
-                <Search/>
+                <Search searchNames={this.searchNames}/>
                 <div className="container-elements">
                     {
-                        prizes.map(({id, name, points, imgSrc }) =>
+                        prizesFilter.map(({id, name, points, imgSrc }) =>
                                     <ShowElements
                                     key={id}
                                     name={name}
