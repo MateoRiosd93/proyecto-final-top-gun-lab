@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { BASE_LOCAL_ENDPOINT } from '../constants';
 import axios from 'axios';
 
+import '../styles/Employee.css';
+
 export default class Employee extends Component {
     constructor (props) {
         super(props);
@@ -43,11 +45,19 @@ export default class Employee extends Component {
         const {name,job,area,imgSrc,points} = this.state.employee;
         return (
             <div className="container-employee">
-                <p> desde el empleado : {name}</p>
-                <img src={imgSrc} alt=""/>
-                <span>esto son los puntos: {points}</span>
-                <p>area en la que trabaja: {area}</p>
-                <p>cargo que ocupa: {job}</p>
+                <div className="container-date">
+                    <h1 className="name-employee">{name}</h1>
+                    <img className="img-employee" src={imgSrc} alt=""/>
+                    <p className="points-employee">{points}</p>
+                </div>
+                <div className="container-date">
+                    <p className="area-employee">{area}</p>
+                    <p className="job-employee">{job}</p>
+                    <div className="container-butons">
+                        <button className="buton-employee-edit">Edit</button>
+                        <button className="buton-employee-delete">Delete</button>
+                    </div>
+                </div>
             </div>
         )
     }
