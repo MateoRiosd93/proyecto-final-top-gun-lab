@@ -48,7 +48,10 @@ class Employees extends Component {
         const employeesFilter = employees.filter(employee => employee.name.toLowerCase().includes(searchName.toLowerCase()));
         return (
             <div className="container-employees">
-                <Search searchNames={this.searchNames}/>
+                <div className="container-search-add">
+                    <Search searchNames={this.searchNames}/>
+                    <button className="buton-add"> Add </button>
+                </div>
                 <div className="container-elements">
                 {
                     employeesFilter.map(({id,name,imgSrc,points}) =>
