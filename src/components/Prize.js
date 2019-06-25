@@ -38,14 +38,13 @@ export default class Prize extends Component {
     }
 
     render() {
-        console.log(this.state);
         const {name,points,imgSrc,description} = this.state.prize;
         return (
             <div className="container-prize">
                 <p> desde el prize : {name}</p>
                 <img src={imgSrc} alt=""/>
+                <p>description: {description}</p>
                 <span>esto son los puntos: {points}</span>
-                <p>esta es la description {description}</p>
             </div>
         )
     }

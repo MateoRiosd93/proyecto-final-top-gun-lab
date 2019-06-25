@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { BASE_LOCAL_ENDPOINT } from '../constants';
 import Search from './Search';
-import ShowElements from './ShowElements';
 import axios from 'axios';
+import ShowAchievements from './ShowAchievements';
 
-export default class Achivements extends Component {
+import '../styles/Achievements.css';
+
+export default class Achievements extends Component {
     state = {
         achievements:[],
         isLoad: false,
@@ -41,18 +43,18 @@ export default class Achivements extends Component {
         const achievementsFilter = achievements.filter(achievement => achievement.name.toLowerCase().includes(searchName.toLowerCase()));
 
         return (
-            <div className="container-employees">
+            <div className="container-achievements">
                 <Search searchNames={this.searchNames}/>
-                <div className="container-elements">
+                <ul className="list-achievements">
                 {
                     achievementsFilter.map(({id,name,points}) =>
-                        <ShowElements
+                        <ShowAchievements
                             key={id}
                             name={name}
                             points={points}/>
                      )
                 }
-                </div>
+                </ul>
             </div>
         )
     }

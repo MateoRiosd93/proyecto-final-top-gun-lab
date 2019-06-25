@@ -1,0 +1,22 @@
+.container-achievement{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid white;
+    font-family: var(--font);
+}
+
+.name-achievement{
+    font-size: 22px;
+}
+
+.points-achievement{
+    font-size: 20px;
+    margin-left: 2rem;
+    color: tomato;
+}
+
+.button-achievement{
+    margin: 0.3rem;
+}
