@@ -1,16 +1,46 @@
 .container-employees{
-    padding: 2rem;
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: rgb(53,205,64);
 }
 
-.container-elements{
+.container-search-add{
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-elements{
+    margin-top: 3rem;
+    display: flex;
     flex-wrap: wrap;
 }
+
+.buton-add{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0.3rem;
+    width: 8rem;
+    height: 2rem;
+    border: 3px solid white;
+    border-radius: 50px;
+    background: none;
+    text-align: center;
+}
+
+.buton-add:focus{
+    outline: none;
+}
+
+.buton-add:hover{
+    background: white;
+    color: black;
+    transition: 0.5seg;
+}
+
 
 
 

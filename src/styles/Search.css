@@ -1,0 +1,24 @@
+.container-search{
+    font-family: var(--font);
+}
+
+.label-search{
+    font-family: var(--font);
+    font-size: 25px;
+    font-style: italic;
+    margin-right: 2rem;
+}
+
+.input-search{
+    font-size: 18px;
+    width: 15rem;
+    height: 2rem;
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+}
+
+.input-search:focus{
+    outline: none;
+    border: 1px solid black;
+}

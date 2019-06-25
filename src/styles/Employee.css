@@ -1,0 +1,91 @@
+.container-employee{
+    margin: 2rem auto;
+    background: white;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.container-date{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font);
+}
+
+.name-employee{
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+.img-employee{
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.area-employee{
+    font-size: 22px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.points-employee{
+    font-size: 20px;
+}
+
+.container-butons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--font);
+}
+
+.buton-employee-edit{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0.3rem;
+    width: 6rem;
+    height: 2rem;
+    border: 3px solid var(--greenColor);
+    border-radius: 50px;
+    background: none;
+}
+
+.buton-employee-edit:focus{
+    outline: none;
+}
+
+.buton-employee-edit:hover{
+    background: var(--greenColor);
+    color: white;
+    transition: 0.5seg;
+    font-weight: normal;
+}
+
+.buton-employee-delete{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0.3rem;
+    width: 6rem;
+    height: 2rem;
+    border: 3px solid orangered;
+    border-radius: 50px;
+    background: none;
+}
+
+.buton-employee-delete:focus{
+    outline: none;
+}
+
+.buton-employee-delete:hover{
+    background: orangered;
+    color: white;
+    transition: 0.5seg;
+}
+
+

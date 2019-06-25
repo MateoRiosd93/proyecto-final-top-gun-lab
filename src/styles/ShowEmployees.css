@@ -1,25 +1,36 @@
 .container-element{
-    margin: 0.5rem;
-    border: 1px solid black;
-    border-radius: 12px;
+    width: 180px;
+    padding: 0.5rem;
+    margin: 0.8rem;
+    box-shadow: 0 0 3px 3px black;
+    border-radius: 8px;
     background: whitesmoke;
-
-
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font);
 }
 
 .name-element{
+    margin: 0;
     width: 100%;
     text-align: center;
+    text-decoration: none;
 }
 
 .img-element{
-    width: 320px;
-    height: 200px;
-    padding: 20px;
+    width: 100%;
+    margin: 0.3rem;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.points-element{
+    margin: 0;
+    text-decoration: none;
+}
+
+NavLink{
+    text-decoration: none;
 }
