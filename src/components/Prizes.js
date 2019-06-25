@@ -18,8 +18,9 @@ class Prizes extends Component {
     getPrizesDB = () => {
         axios.get(`${BASE_LOCAL_ENDPOINT}/prizes`)
         .then(response => {
+            const prizes = response.data.sort((element1,element2) => element1.points - element2.points)
             this.setState({
-                prizes: response.data
+                prizes
              })
         })
         .catch(error => {
@@ -47,7 +48,7 @@ class Prizes extends Component {
         return (
             <div className="container-prizes">
                 <Search searchNames={this.searchNames}/>
-                <div className="container-elements">
+                <div className="container-prizes">
                     {
                         prizesFilter.map(({id, name, points, imgSrc }) =>
                             <NavLink key={id} to={`/prizes/${id}`}>

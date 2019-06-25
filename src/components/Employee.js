@@ -46,6 +46,8 @@ export default class Employee extends Component {
                 <p> desde el empleado : {name}</p>
                 <img src={imgSrc} alt=""/>
                 <span>esto son los puntos: {points}</span>
+                <p>area en la que trabaja: {area}</p>
+                <p>cargo que ocupa: {job}</p>
             </div>
         )
     }
