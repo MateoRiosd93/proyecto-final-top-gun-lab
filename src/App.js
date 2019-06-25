@@ -5,7 +5,7 @@ import Employees from './components/Employees';
 import Employee from './components/Employee';
 import Prizes from './components/Prizes';
 import Prize from './components/Prize';
-import Achivements from './components/Achivements';
+import Achievements from './components/Achievements';
 
 
 import './styles/App.css';
@@ -21,7 +21,7 @@ function App() {
             <Route exact path="/employees/:id" component={Employee}/>
             <Route exact path="/prizes" component={Prizes}/>
             <Route exact path="/prizes/:id" component={Prize}/>
-            <Route exact path="/achivements" component={Achivements}/>
+            <Route exact path="/achivements" component={Achievements}/>
             <Route exact path="/" render={() => (
                                   <Redirect to="/employees"/>
             )}/>
