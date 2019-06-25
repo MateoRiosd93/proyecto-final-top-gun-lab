@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {BASE_LOCAL_ENDPOINT} from '../constants';
+import { NavLink } from 'react-router-dom';
 import Search from './Search';
 import ShowElements from './ShowElements';
 import axios from 'axios';
@@ -9,14 +10,14 @@ class Prizes extends Component {
 
     state = {
         prizes: [],
-        error: false
+        error: false,
+        searchName:''
     }
 
 
     getPrizesDB = () => {
         axios.get(`${BASE_LOCAL_ENDPOINT}/prizes`)
         .then(response => {
-            console.log(response.data)
             this.setState({
                 prizes: response.data
              })
@@ -33,22 +34,31 @@ class Prizes extends Component {
         this.getPrizesDB();
     }
 
+    searchNames = letter => {
+        const searchName = letter;
+        this.setState({
+            searchName
+        })
+    }
 
     render() {
-        const {prizes} = this.state
+        const {prizes,searchName} = this.state;
+        const prizesFilter = prizes.filter(prize => prize.name.toLowerCase().includes(searchName.toLowerCase()));
         return (
             <div className="container-prizes">
-                <Search/>
+                <Search searchNames={this.searchNames}/>
                 <div className="container-elements">
                     {
-                        prizes.map(({id, name, points, imgSrc }) =>
-                                    <ShowElements
+                        prizesFilter.map(({id, name, points, imgSrc }) =>
+                            <NavLink key={id} to={`/prizes/${id}`}>
+                                <ShowElements
                                     key={id}
                                     name={name}
                                     imgSrc={imgSrc}
                                     points={points}
                                     />
-                                  )
+                            </NavLink>
+                        )
                     }
                 </div>
             </div>
