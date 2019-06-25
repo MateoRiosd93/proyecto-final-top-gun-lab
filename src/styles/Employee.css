@@ -18,6 +18,8 @@
 
 .name-employee{
     font-size: 25px;
+    font-weight: bold;
+
 }
 
 .img-employee{
@@ -47,7 +49,7 @@
     font-size: 18px;
     font-weight: bold;
     margin: 0.3rem;
-    width: 50%;
+    width: 6rem;
     height: 2rem;
     border: 3px solid var(--greenColor);
     border-radius: 50px;
@@ -62,13 +64,14 @@
     background: var(--greenColor);
     color: white;
     transition: 0.5seg;
+    font-weight: normal;
 }
 
 .buton-employee-delete{
     font-size: 18px;
     font-weight: bold;
     margin: 0.3rem;
-    width: 50%;
+    width: 6rem;
     height: 2rem;
     border: 3px solid orangered;
     border-radius: 50px;

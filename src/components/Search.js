@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+
+import '../styles/Search.css';
 
 export default class Search extends Component {
 
@@ -10,12 +12,16 @@ export default class Search extends Component {
     render() {
         return (
             <div className="container-search">
-                <form action="">
-                    <div className="container-info">
-                        <label htmlFor=""></label>
-                        <input onChange={this.handleInput} type="text" placeholder="Search"/>
-                    </div>
-                </form>
+                <label
+                    className="label-search"
+                    htmlFor="search"> Do you want to search for an employee?
+                </label>
+                <input
+                    name="search"
+                    className="input-search"
+                    onChange={this.handleInput}
+                    ype="text"
+                    placeholder="Search"/>
             </div>
         )
     }
