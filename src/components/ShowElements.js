@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/ShowEmployees.css';
+import '../styles/ShowElement.css';
 
 export default function ShowEmployees ({name,imgSrc,points}) {
     return (

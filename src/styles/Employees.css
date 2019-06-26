@@ -1,9 +1,9 @@
-.container-employees{
-    margin-top: 3rem;
+.container-search-employees{
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgb(53,205,64);
+    background: none;
 }
 
 .container-search-add{
@@ -13,10 +13,11 @@
     align-items: center;
 }
 
-.container-elements{
+.container-employees{
     margin-top: 3rem;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .buton-add{
