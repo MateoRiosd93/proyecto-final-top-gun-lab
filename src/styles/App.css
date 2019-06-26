@@ -8,8 +8,9 @@ body{
   	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
-
-    background: url(../assets/TEAM.PNG) no-repeat fixed ;
+	background-image: url(../assets/TEAM.PNG);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 :root{

@@ -78,7 +78,10 @@ class Employees extends Component {
         return (
             <div className="container-search-employees">
                 <div className="container-search-add">
-                    <Search searchNames={this.searchNames}/>
+                    <Search 
+                        searchNames={this.searchNames}
+                        mensaje='Do you want to search for an employee?'
+                        />
                     <button className="buton-add" onClick={this.handleShowModal}> ADD </button>
                 </div>
 

@@ -48,7 +48,10 @@ class Prizes extends Component {
         return (
             <div className="container-prizes">
                 <div className="container-search-add">
-                    <Search searchNames={this.searchNames}/>
+                    <Search 
+                        searchNames={this.searchNames}
+                        mensaje='Do you want to search for an Prize'
+                        />
                 </div>
                 <div className="container-elements">
                     {
