@@ -69,6 +69,9 @@
     border-bottom: 2px solid white;
     background: rgba(255, 255, 255, .2);
     height: 35px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
 }
 
 

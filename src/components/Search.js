@@ -10,11 +10,12 @@ export default class Search extends Component {
     }
 
     render() {
+        const {mensaje} = this.props
         return (
             <div className="container-search">
                 <label
                     className="label-search"
-                    htmlFor="search"> Do you want to search for an employee?
+                    htmlFor="search">{mensaje}
                 </label>
                 <input
                     name="search"

@@ -119,14 +119,6 @@
       "area": "Sales",
       "imgSrc": "https://randomuser.me/api/portraits/women/44.jpg",
       "points": 1
-    },
-    {
-      "name": "santiago",
-      "job": "Developer",
-      "area": "FrontEnd",
-      "points": "3",
-      "imgSrc": "https://img.elcomercio.pe/files/article_content_ec_fotos/uploads/2019/02/11/5c623a775a8bb.jpeg",
-      "id": 16
     }
   ],
   "prizes": [
