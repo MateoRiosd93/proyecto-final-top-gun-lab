@@ -3,22 +3,23 @@
 }
 
 .label-search{
+    margin-right: 6rem;
     font-family: var(--font);
-    font-size: 25px;
+    font-size: 35px;
     font-style: italic;
-    margin-right: 2rem;
+    font-weight: bold;
 }
 
 .input-search{
     font-size: 18px;
-    width: 15rem;
-    height: 2rem;
-    border-radius: 15px;
+    width: 18rem;
+    height: 3rem;
+    border-radius: 30px;
     border: none;
     text-align: center;
 }
 
 .input-search:focus{
     outline: none;
-    border: 1px solid black;
+    border: 2px solid black;
 }

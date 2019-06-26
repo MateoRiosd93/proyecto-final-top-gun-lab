@@ -13,10 +13,13 @@ body{
 }
 
 :root{
-
+	--purpleColor: #8941C4;
 	--greenColor : #62E52C;
 	--grayColor: #253746;
 	--orangeColor: #f67b27;
+	--blueColor: #22A6F5;
+	--bluelightColor: #2BDDD7;
+	--pinkColor: #E32E7F;
 
 	--font: 'Open Sans', sans-serif;
 }
