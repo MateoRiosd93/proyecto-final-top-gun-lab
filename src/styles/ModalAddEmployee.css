@@ -4,9 +4,129 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(43, 43, 43, 0.75);
+    background: rgba(37, 55, 70, .7);
     z-index: 20;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: var(--font);
+    padding: 40px;
+}
+
+.modal-container{
+    display: flex;
+    align-items: center;
+    background: rgba(98, 229, 44, .6);
+    border-radius: 10px;
+    padding: 35px;
+    position: relative;
+}
+
+.modal-container aside {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.modal-container h2{
+    font-size: 82px;
+    font-weight: 800;
+    color: white;
+}
+
+.modal-form{
+    padding: 30px;
+    width: 850px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.modal-field-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.modal-buttons-container{
+    display: flex;
+    justify-content: space-evenly;
+} 
+
+
+.modal-field-container label{
+    color: white;
+    font-size: 20px;
+}
+
+.modal-field-container span{
+    color: red;
+}
+
+.modal-field-container input{
+    border: none;
+    border-bottom: 2px solid white;
+    background: rgba(255, 255, 255, .2);
+    height: 35px;
+}
+
+
+.button-confirm-add{
+    padding: 10px;
+    width: 7rem;
+    border: 2px solid white;
+    border-radius: 30px;
+    background:none;
+    font-family: var(--font);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.button-confirm-add:hover{
+    background: white;
+    color: var(--greenColor);
+}
+
+.button-confirm-add:focus{
+    outline: none;
+}
+
+.button-cancel-add{
+    padding: 10px;
+    width: 7rem;
+    border: 2px solid white;
+    border-radius: 30px;
+    background:none;
+    font-family: var(--font);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.button-cancel-add:hover{
+    background: white;
+    color: var(--orangeColor);
+}
+
+.close-modal-button {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal-button:focus{
+    outline: none;
 }
