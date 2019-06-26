@@ -47,8 +47,10 @@ class Prizes extends Component {
         const prizesFilter = prizes.filter(prize => prize.name.toLowerCase().includes(searchName.toLowerCase()));
         return (
             <div className="container-prizes">
-                <Search searchNames={this.searchNames}/>
-                <div className="container-prizes">
+                <div className="container-search-add">
+                    <Search searchNames={this.searchNames}/>
+                </div>
+                <div className="container-elements">
                     {
                         prizesFilter.map(({id, name, points, imgSrc }) =>
                             <NavLink key={id} to={`/prizes/${id}`}>
