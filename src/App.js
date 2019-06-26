@@ -6,9 +6,10 @@ import Employee from './components/Employee';
 import Prizes from './components/Prizes';
 import Prize from './components/Prize';
 import Achievements from './components/Achievements';
-
+import Footer from './components/Footer';
 
 import './styles/App.css';
+
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
                                   <Redirect to="/employees"/>
             )}/>
           </Switch>
+          <Footer/>
         </HashRouter>
       </div>
     );

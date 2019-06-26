@@ -9,7 +9,7 @@ body{
 	padding: 0;
 	overflow-x: hidden;
 
-    background: rgb(53,205,64);
+    background: url(../assets/TEAM.PNG) no-repeat fixed ;
 }
 
 :root{

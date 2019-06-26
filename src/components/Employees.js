@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ShowElements from './ShowElements';
 import Search from './Search';
-import Employee from './Employee';
 import { BASE_LOCAL_ENDPOINT } from '../constants';
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
@@ -56,13 +55,13 @@ class Employees extends Component {
         const {employees,searchName, showModal} = this.state;
         const employeesFilter = employees.filter(employee => employee.name.toLowerCase().includes(searchName.toLowerCase()));
         return (
-            <div className="container-employees">
+            <div className="container-search-employees">
                 <div className="container-search-add">
                     <Search searchNames={this.searchNames}/>
-                    <button className="buton-add" onClick={this.handleShowModal}> Add </button>
+                    <button className="buton-add" onClick={this.handleShowModal}> ADD </button>
                 </div>
 
-                <div className="container-elements">
+                <div className="container-employees">
                 {
                     showModal && (<ModalAddEmployee
                                     handleShowModal={this.handleShowModal}
