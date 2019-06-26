@@ -2,13 +2,14 @@
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     background: rgb(53,205,64);
 }
 
 .container-elements{
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
 }
 

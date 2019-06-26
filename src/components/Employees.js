@@ -5,6 +5,7 @@ import Employee from './Employee';
 import { BASE_LOCAL_ENDPOINT } from '../constants';
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
+import ModalAddEmployee from './ModalAddEmployee';
 
 import '../styles/Employees.css';
 
@@ -12,7 +13,8 @@ class Employees extends Component {
     state = {
         employees : [],
         isLoad: false,
-        searchName:''
+        searchName:'',
+        showModal: false
     }
 
     getEmployeesBD = () => {
@@ -43,16 +45,29 @@ class Employees extends Component {
         })
     }
 
+    handleShowModal = e =>{
+        this.setState(prevState =>({
+            ...prevState,
+            showModal: !prevState.showModal
+        }))
+    }
+
     render() {
-        const {employees,searchName} = this.state;
+        const {employees,searchName, showModal} = this.state;
         const employeesFilter = employees.filter(employee => employee.name.toLowerCase().includes(searchName.toLowerCase()));
         return (
             <div className="container-employees">
                 <div className="container-search-add">
                     <Search searchNames={this.searchNames}/>
-                    <button className="buton-add"> Add </button>
+                    <button className="buton-add" onClick={this.handleShowModal}> Add </button>
                 </div>
+
                 <div className="container-elements">
+                {
+                    showModal && (<ModalAddEmployee
+                                    handleShowModal={this.handleShowModal}
+                                    />)
+                }
                 {
                     employeesFilter.map(({id,name,imgSrc,points}) =>
                     <NavLink key={id} to={`/employees/${id}`}>
