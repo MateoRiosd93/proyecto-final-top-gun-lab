@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import Search from './Search';
 import ShowElements from './ShowElements';
 import axios from 'axios';
+import ModalAppPrize from './ModalAddPrize';
 import '../styles/Prizes.css';
 
 class Prizes extends Component {
@@ -11,7 +12,9 @@ class Prizes extends Component {
     state = {
         prizes: [],
         error: false,
-        searchName:''
+        searchName:'',
+        showModal: false,
+        createPrizeError:false
     }
 
 
@@ -42,18 +45,51 @@ class Prizes extends Component {
         })
     }
 
+
+    handleShowModal = e =>{
+        this.setState(prevState =>({
+            ...prevState,
+            showModal: !prevState.showModal
+        }))
+    }
+
+    createPrize =  ( e, prize )  => {
+        const {name, description, points, imgSrc} = prize;
+        axios.post(`${BASE_LOCAL_ENDPOINT}/prizes`, {
+            name,
+            description,
+            points,
+            imgSrc
+        }, {
+            headers: { "Content-Type": "application/json"}
+        })
+        .then (() => {this.getPrizesDB()} )
+        .catch(() => {this.setState({createPrizeError:true})})
+
+        this.handleShowModal(e);
+    }
+
+
+
     render() {
-        const {prizes,searchName} = this.state;
+        const {prizes,searchName, showModal} = this.state;
         const prizesFilter = prizes.filter(prize => prize.name.toLowerCase().includes(searchName.toLowerCase()));
         return (
-            <div className="container-prizes">
+            <div className="container-search-prizes">
                 <div className="container-search-add">
                     <Search 
                         searchNames={this.searchNames}
                         mensaje='Do you want to search for an Prize'
-                        />
+                    />
+                    <button className="buton-add" onClick={this.handleShowModal}> ADD </button>
                 </div>
-                <div className="container-elements">
+                <div className="container-prizes">
+                    {
+                        (showModal && <ModalAppPrize
+                            handleShowModal={this.handleShowModal}
+                            createPrize={this.createPrize}
+                                       />)
+                    }
                     {
                         prizesFilter.map(({id, name, points, imgSrc }) =>
                             <NavLink key={id} to={`/prizes/${id}`}>

@@ -1,9 +1,9 @@
-.container-prizes{
-    padding: 2rem;
+.container-search-prizes{
+    margin-top: 4rem;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
+    background: none;
 }
 
 .container-elements{
@@ -12,3 +12,40 @@
     flex-wrap: wrap;
 }
 
+.container-search-add{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-prizes{
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.buton-add{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0.3rem;
+    width: 7rem;
+    height: 3rem;
+    border: 3px solid white;
+    border-radius: 50px;
+    background: none;
+    text-align: center;
+    color: white;
+}
+
+.buton-add:focus{
+    outline: none;
+}
+
+.buton-add:hover{
+    background: white;
+    color: black;
+    transition: 0.5seg;
+}
