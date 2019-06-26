@@ -14,7 +14,8 @@ class Employees extends Component {
         employees : [],
         isLoad: false,
         searchName:'',
-        showModal: false
+        showModal: false,
+        createEmployeeError:false
     }
 
     getEmployeesBD = () => {
@@ -23,7 +24,8 @@ class Employees extends Component {
             const employees = response.data.sort((elemento1,elemento2) => elemento2.points - elemento1.points);
             console.log(employees);
             this.setState({
-                employees
+                employees,
+                createEmployeeError: false
             })
 
         })
@@ -52,6 +54,25 @@ class Employees extends Component {
         }))
     }
 
+
+    createEmployee =  ( e, employee )  => {
+        const {name, job, area, points, imgSrc} = employee;
+        console.log(employee);
+        axios.post(`${BASE_LOCAL_ENDPOINT}/employees`, {
+            name,
+            job,
+            area,
+            points,
+            imgSrc
+        }, {
+            headers: { "Content-Type": "application/json"}
+        })
+        .then (() => {this.getEmployeesBD()} )
+        .catch(() => {this.setState({createEmployeeError:true})})
+
+        this.handleShowModal(e);
+    }
+
     render() {
         const {employees,searchName, showModal} = this.state;
         const employeesFilter = employees.filter(employee => employee.name.toLowerCase().includes(searchName.toLowerCase()));
@@ -66,6 +87,7 @@ class Employees extends Component {
                 {
                     showModal && (<ModalAddEmployee
                                     handleShowModal={this.handleShowModal}
+                                    createEmployee={this.createEmployee}
                                     />)
                 }
                 {
