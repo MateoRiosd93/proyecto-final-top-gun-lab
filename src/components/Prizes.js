@@ -69,17 +69,15 @@ class Prizes extends Component {
         this.handleShowModal(e);
     }
 
-
-
     render() {
         const {prizes,searchName, showModal} = this.state;
         const prizesFilter = prizes.filter(prize => prize.name.toLowerCase().includes(searchName.toLowerCase()));
         return (
             <div className="container-search-prizes">
                 <div className="container-search-add">
-                    <Search 
+                    <Search
                         searchNames={this.searchNames}
-                        mensaje='Do you want to search for an Prize'
+                        mensaje='Do you want to search for an Prize?'
                     />
                     <button className="buton-add" onClick={this.handleShowModal}> ADD </button>
                 </div>
