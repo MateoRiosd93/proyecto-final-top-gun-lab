@@ -18,7 +18,7 @@ class Employees extends Component {
     }
 
     getEmployeesBD = () => {
-        axios.get(`${BASE_LOCAL_ENDPOINT}/employees`)
+        axios.get(`${BASE_LOCAL_ENDPOINT}employees`)
         .then(response => {
             const employees = response.data.sort((elemento1,elemento2) => elemento2.points - elemento1.points);
             console.log(employees);
@@ -57,7 +57,7 @@ class Employees extends Component {
     createEmployee =  ( e, employee )  => {
         const {name, job, area, points, imgSrc} = employee;
         console.log(employee);
-        axios.post(`${BASE_LOCAL_ENDPOINT}/employees`, {
+        axios.post(`${BASE_LOCAL_ENDPOINT}employees`, {
             name,
             job,
             area,
@@ -94,7 +94,7 @@ class Employees extends Component {
                 }
                 {
                     employeesFilter.map(({id,name,imgSrc,points}) =>
-                    <NavLink key={id} to={`/employees/${id}`}>
+                    <NavLink key={id} to={`/employees/${id}`} className="employee-link">
                         <ShowElements
                             key={id}
                             name={name}

@@ -5,13 +5,17 @@
     margin: 0.8rem;
     box-shadow: 0 0 3px 3px black;
     border-radius: 8px;
-    background: whitesmoke;
+    background: var(--grayColor);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     font-family: var(--font);
     transition: all ease 1.2s;
+}
+
+.container-element:hover{
+    transform: rotateY(180deg);
 }
 
 
