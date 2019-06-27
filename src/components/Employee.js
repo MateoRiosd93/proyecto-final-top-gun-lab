@@ -22,7 +22,7 @@ export default class Employee extends Component {
     }
 
     getPrizesBD = () => {
-        axios.get(`${BASE_LOCAL_ENDPOINT}/prizes`)
+        axios.get(`${BASE_LOCAL_ENDPOINT}prizes`)
         .then(response => {
             const prizes =  response.data;
             this.setState({
@@ -38,7 +38,7 @@ export default class Employee extends Component {
 
     getEmployeeID = () => {
         const {match:{params:{id}}} = this.props;
-        axios.get(`${BASE_LOCAL_ENDPOINT}/employees/${id}`)
+        axios.get(`${BASE_LOCAL_ENDPOINT}employees/${id}`)
             .then(response => {
                 this.setState({
                     employee : response.data,

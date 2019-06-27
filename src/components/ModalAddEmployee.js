@@ -35,7 +35,6 @@ export default class ModalAddEmployee extends Component {
             imgSrc: this.state.newEmployee.imgSrc,
         }
 
-        console.log('preparando...', employee);
         this.props.createEmployee( e, employee);
     }
 
