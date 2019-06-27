@@ -21,7 +21,6 @@ class Employees extends Component {
         axios.get(`${BASE_LOCAL_ENDPOINT}employees`)
         .then(response => {
             const employees = response.data.sort((elemento1,elemento2) => elemento2.points - elemento1.points);
-            console.log(employees);
             this.setState({
                 employees,
                 createEmployeeError: false
