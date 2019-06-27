@@ -23,7 +23,6 @@ export default class Employee extends Component {
         const {match:{params:{id}}} = this.props;
         axios.get(`${BASE_LOCAL_ENDPOINT}/employees/${id}`)
             .then(response => {
-                console.log(response);
                 this.setState({
                     employee : response.data,
                     error : ''
@@ -41,7 +40,6 @@ export default class Employee extends Component {
     }
 
     render() {
-        console.log(this.state);
         const {name,job,area,imgSrc,points} = this.state.employee;
         return (
             <div className="container-employee">
@@ -54,8 +52,8 @@ export default class Employee extends Component {
                     <p className="area-employee">{area}</p>
                     <p className="job-employee">{job}</p>
                     <div className="container-butons">
-                        <button className="buton-employee-edit">Edit</button>
-                        <button className="buton-employee-delete">Delete</button>
+                        <button className="buton-employee-edit">EDIT</button>
+                        <button className="buton-employee-delete">DELETE</button>
                     </div>
                 </div>
             </div>

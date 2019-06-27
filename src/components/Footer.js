@@ -2,6 +2,7 @@ import React from 'react';
 
 import '../styles/Footer.css';
 import '../fonts/style.css';
+import clutch from '../assets/Clutch.png';
 
 export default function Footer() {
     return (
@@ -63,6 +64,9 @@ export default function Footer() {
                                 <span className="icon-twitter"></span>
                             </a>
                         </div>
+                        <a  href="https://clutch.co/profile/team-international?utm_source=widget&utm_medium=widget_2&utm_campaign=widget&utm_content=logo">
+                            <img className="clutch-img" src={clutch} alt="Clutch TEAM Internacional"/>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -72,7 +76,9 @@ export default function Footer() {
                     <h3 className="text-info-privacy">Sitemap | Privacy Policy</h3>
                 </div>
                 <div className="container-button">
-                    <button className="button-footer"></button>
+                    <button className="button-footer">
+                        {/* <a href="#logo-home"></a> */}
+                    </button>
                 </div>
             </div>
         </div>

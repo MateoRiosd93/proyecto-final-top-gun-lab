@@ -7,7 +7,7 @@ const Header = () => {
 
   return (
     <nav className="navbar">
-      <div className="container_logo">
+      <div className="container_logo" name="logo-home">
         <NavLink to="/employees" className="nav_link">
           <img
             src="https://www.teaminternational.com/wp-content/uploads/2019/05/new-web-logo-team-international.png"

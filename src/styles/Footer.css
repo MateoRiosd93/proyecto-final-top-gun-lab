@@ -94,6 +94,10 @@
     color: var(--greenColor);
 }
 
+.clutch-img{
+    margin-top: 1.5rem;
+}
+
 .button-footer{
     width: 2.5rem;
     height: 2.5rem;
@@ -101,11 +105,19 @@
     border-radius: 50px;
     background: none;
     rotate: 90deg;
+    position: relative;
+}
+
+.button-footer:focus{
+    outline: none;
 }
 
 .button-footer::before{
-    content: ' ';
-    width: 1rem;
-    height: 2rem;
-    border: 1px solid var(--greenColor);
+    content: '^';
+    position: absolute;
+    top:9px;
+    right: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--greenColor);
 }
