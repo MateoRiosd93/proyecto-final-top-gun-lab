@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 import Header from './components/Header';
 import Employees from './components/Employees';
@@ -10,9 +10,9 @@ import Footer from './components/Footer';
 
 import './styles/App.css';
 
+export default class App extends Component {
 
-function App() {
-
+  render() {
     return (
       <div className="container-app">
         <HashRouter>
@@ -31,7 +31,7 @@ function App() {
         </HashRouter>
       </div>
     );
+  }
 }
 
-export default App;
 

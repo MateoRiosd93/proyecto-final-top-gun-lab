@@ -24,13 +24,13 @@ class Prizes extends Component {
             const prizes = response.data.sort((element1,element2) => element1.points - element2.points)
             this.setState({
                 prizes
-             })
+             });
         })
         .catch(error => {
             this.setState({
                 error: true
             })
-        })
+        });
     }
 
 
