@@ -1,11 +1,12 @@
 .container-employee{
     margin: 2rem auto;
-    background: white;
-    width: 30%;
+    background: rgba(37,55, 70, 0.8);
+    width: 50%;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border: 3px solid black;
+    box-shadow: 0 0 2px 2px black;
     border-radius: 5px;
 }
 
@@ -17,9 +18,9 @@
 }
 
 .name-employee{
-    font-size: 25px;
-    font-weight: bold;
-
+    font-size: 35px;
+    font-weight: 800;
+    color: white;
 }
 
 .img-employee{
@@ -27,13 +28,18 @@
     border-radius: 3px;
 }
 
-.area-employee{
+.points-employee{
+    color: white;
     font-size: 22px;
+}
+
+.area-employee{
+    font-size: 30px;
     text-decoration: underline;
     font-weight: bold;
 }
 
-.points-employee{
+.job-employee{
     font-size: 20px;
 }
 
@@ -48,12 +54,16 @@
 .buton-employee-edit{
     font-size: 18px;
     font-weight: bold;
-    margin: 0.3rem;
-    width: 6rem;
-    height: 2rem;
-    border: 3px solid var(--greenColor);
+    margin: 2rem;
+    width: 7rem;
+    height: 3rem;
+    border: 3px solid white;
     border-radius: 50px;
     background: none;
+    text-align: center;
+    color: white;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
 }
 
 .buton-employee-edit:focus{
@@ -61,21 +71,24 @@
 }
 
 .buton-employee-edit:hover{
-    background: var(--greenColor);
-    color: white;
+    background: white;
+    color: var(--greenColor);
     transition: 0.5seg;
-    font-weight: normal;
 }
 
 .buton-employee-delete{
     font-size: 18px;
     font-weight: bold;
     margin: 0.3rem;
-    width: 6rem;
-    height: 2rem;
-    border: 3px solid orangered;
+    width: 7rem;
+    height: 3rem;
+    border: 3px solid white;
     border-radius: 50px;
     background: none;
+    text-align: center;
+    color: white;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
 }
 
 .buton-employee-delete:focus{
@@ -83,8 +96,8 @@
 }
 
 .buton-employee-delete:hover{
-    background: orangered;
-    color: white;
+    background: white;
+    color: var(--orangeColor);
     transition: 0.5seg;
 }
 
