@@ -83,6 +83,17 @@
     margin-right: 2rem;
 }
 
+.icon-follow{
+    text-decoration: none;
+    margin-right: 1.5rem;
+    color: white;
+    font-size: 20px;
+}
+
+.icon-follow:hover{
+    color: var(--greenColor);
+}
+
 .button-footer{
     width: 2.5rem;
     height: 2.5rem;

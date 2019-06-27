@@ -78,7 +78,7 @@ class Employees extends Component {
         return (
             <div className="container-search-employees">
                 <div className="container-search-add">
-                    <Search 
+                    <Search
                         searchNames={this.searchNames}
                         mensaje='Do you want to search for an employee?'
                         />

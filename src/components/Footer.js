@@ -1,6 +1,7 @@
 import React from 'react';
 
 import '../styles/Footer.css';
+import '../fonts/style.css';
 
 export default function Footer() {
     return (
@@ -52,9 +53,15 @@ export default function Footer() {
                     <div className="container-follow">
                         <h3 className="title-info">FOLLOW US</h3>
                         <div>
-                            <i>LinkedIn</i>
-                            <i>Faceboock</i>
-                            <i>Twitter</i>
+                            <a className="icon-follow" href="https://www.linkedin.com/company/team-international/">
+                                <span className="incon-follow icon-linkedin2"></span>
+                            </a>
+                            <a className="icon-follow" href="https://www.facebook.com/teamintl">
+                                <span className="incon-follow icon-facebook"></span>
+                            </a>
+                            <a className="icon-follow" href="https://twitter.com/team_intl">
+                                <span className="icon-twitter"></span>
+                            </a>
                         </div>
                     </div>
                 </div>
