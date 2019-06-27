@@ -1,0 +1,38 @@
+.container-prize{
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--font);
+    width: 32%;
+    box-shadow: 0 0 2px 2px black;
+    background: rgba(37, 55, 70, 0.8);
+    border-radius: 8px;
+}
+
+.name-prize{
+    margin: 0.8rem;
+    font-size: 28px;
+    color: white;
+}
+
+.img-prize{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    display: block;
+}
+
+.point-prize{
+    margin: 0.5rem;
+    font-size: 25px;
+    color: var(--yellowColor);
+}
+
+.description-prize{
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+
