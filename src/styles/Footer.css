@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     background: var(--grayColor);
+    position: absolute;
 }
 
 .container-info{
@@ -80,7 +81,22 @@
 }
 
 .container-button{
-    margin-right: 2rem;
+    width: 50px;
+    position: relative;
+    margin-right: 1.6rem;
+}
+
+
+.container-button::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 20px;
+    left: 15px;
+    box-shadow: 3px 3px var(--greenColor);
+    transform: rotate(225deg);
 }
 
 .icon-follow{
@@ -98,26 +114,22 @@
     margin-top: 1.5rem;
 }
 
+
 .button-footer{
     width: 2.5rem;
     height: 2.5rem;
     border: 2px solid var(--greenColor);
     border-radius: 50px;
     background: none;
-    rotate: 90deg;
     position: relative;
 }
+
+.button-footer:hover{
+    cursor: pointer;
+}
+
 
 .button-footer:focus{
     outline: none;
 }
 
-.button-footer::before{
-    content: '^';
-    position: absolute;
-    top:9px;
-    right: 12px;
-    font-size: 20px;
-    font-weight: bold;
-    color: var(--greenColor);
-}

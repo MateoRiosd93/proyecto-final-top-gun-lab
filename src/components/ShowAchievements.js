@@ -4,18 +4,18 @@ import '../styles/ShowAchievements.css';
 
 export default function ShowAchievements({name,points}) {
     return (
-        <div className="container-achievement">
+        <li className="container-achievement">
             <h1
                 className="name-achievement">{name}
                     <span
                         className="points-achievement">{points}
                     </span>
             </h1>
-            <div>
-                <button className="button-achievement">Edit</button>
-                <button className="button-achievement">Delete</button>
+            <div className="container-achievement-buttons">
+                <button className="button-achievement-edit">Edit</button>
+                <button className="button-achievement-delete">Delete</button>
             </div>
 
-        </div>
+        </li>
     )
 }

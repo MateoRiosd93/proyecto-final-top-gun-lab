@@ -19,7 +19,7 @@ class Prizes extends Component {
 
 
     getPrizesDB = () => {
-        axios.get(`${BASE_LOCAL_ENDPOINT}/prizes`)
+        axios.get(`${BASE_LOCAL_ENDPOINT}prizes`)
         .then(response => {
             const prizes = response.data.sort((element1,element2) => element1.points - element2.points)
             this.setState({
@@ -55,7 +55,7 @@ class Prizes extends Component {
 
     createPrize =  ( e, prize )  => {
         const {name, description, points, imgSrc} = prize;
-        axios.post(`${BASE_LOCAL_ENDPOINT}/prizes`, {
+        axios.post(`${BASE_LOCAL_ENDPOINT}prizes`, {
             name,
             description,
             points,

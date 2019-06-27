@@ -103,10 +103,10 @@ export default class ModalAddEmployee extends Component {
             <button className="button-cancel-add" onClick={this.props.handleShowModal}>Cancel</button>
           </div>
         </form>
-        </div>
         <button className="close-modal-button" onClick={this.props.handleShowModal}>
           X
         </button>
+        </div>
       </div>
     );
   }
