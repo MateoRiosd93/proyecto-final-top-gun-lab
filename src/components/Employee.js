@@ -4,6 +4,7 @@ import ShowPrizes from './ShowPrizes';
 import axios from 'axios';
 
 import '../styles/Employee.css';
+import '../fonts/style.css';
 
 export default class Employee extends Component {
     constructor (props) {
@@ -22,7 +23,7 @@ export default class Employee extends Component {
     }
 
     getPrizesBD = () => {
-        axios.get(`${BASE_LOCAL_ENDPOINT}/prizes`)
+        axios.get(`${BASE_LOCAL_ENDPOINT}prizes`)
         .then(response => {
             const prizes =  response.data;
             this.setState({
@@ -38,7 +39,7 @@ export default class Employee extends Component {
 
     getEmployeeID = () => {
         const {match:{params:{id}}} = this.props;
-        axios.get(`${BASE_LOCAL_ENDPOINT}/employees/${id}`)
+        axios.get(`${BASE_LOCAL_ENDPOINT}employees/${id}`)
             .then(response => {
                 this.setState({
                     employee : response.data,
@@ -69,7 +70,7 @@ export default class Employee extends Component {
                     <div className="container-date">
                         <h1 className="name-employee">{name}</h1>
                         <img className="img-employee" src={imgSrc} alt=""/>
-                        <p className="points-employee">{points}</p>
+                        <p className="points-employee"><span className="start icon-star-full"></span>{points}</p>
                     </div>
                     <div className="container-date">
                         <p className="area-employee">{area}</p>
@@ -82,7 +83,7 @@ export default class Employee extends Component {
                 </div>
                 {
                 ShowPrizesFilter && (<div className="container-prizesFilter-title">
-                    <h1 className="title-prizes">Estamos listos para mostrar los prizes</h1>
+                    <h1 className="title-prizes">Available Prizes </h1>
                     <div className="container-prizesFilter">
                         {
                         prizesFilter.map(({description,id,imgSrc,name,points}) =>

@@ -7,9 +7,7 @@ export default function ShowAchievements({name,points}) {
         <li className="container-achievement">
             <h1
                 className="name-achievement">{name}
-                    <span
-                        className="points-achievement">{points}
-                    </span>
+                    <span className="points-achievement"><span className="start icon-star-full"></span> {points}</span>
             </h1>
             <div className="container-achievement-buttons">
                 <button className="button-achievement-edit">Edit</button>

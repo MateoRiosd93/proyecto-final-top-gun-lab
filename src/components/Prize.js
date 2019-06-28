@@ -18,7 +18,7 @@ export default class Prize extends Component {
 
     getPrizeID = () => {
         const {match:{params:{id}}} = this.props;
-        axios.get(`${BASE_LOCAL_ENDPOINT}/prizes/${id}`)
+        axios.get(`${BASE_LOCAL_ENDPOINT}prizes/${id}`)
             .then(response => {
                 console.log(response);
                 this.setState({
