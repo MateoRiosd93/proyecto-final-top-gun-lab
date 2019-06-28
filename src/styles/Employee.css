@@ -10,7 +10,7 @@
     display: flex;
     border-radius: 10px;
     background: rgba(37, 55, 70, 0.8);
-    box-shadow: 0 0 2px 2px white;
+    box-shadow: 0 0 20px 5px black;
 }
 
 .container-prizesFilter-title{

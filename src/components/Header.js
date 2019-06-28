@@ -1,10 +1,8 @@
 import React from 'react';
 import "../styles/Header.css";
 import { NavLink } from "react-router-dom";
-// import logo from "../assets/menu.svg";
 
 const Header = () => {
-
   return (
     <nav className="navbar">
       <div className="container_logo" name="logo-home">
@@ -40,9 +38,6 @@ const Header = () => {
           </NavLink>
         </li>
       </ul>
-     {/* <div className="menu_responsive" onClick={(e) => handleChangeFlag(e)} >
-        <img src={logo} alt="menu responsive" />
-      </div> */}
     </nav>
   );
 };
