@@ -20,7 +20,7 @@ class Search extends Component {
           className="input-search"
           onChange={this.handleInput}
           ype="text"
-          placeholder="Search"
+          placeholder="Search..."
         />
       </div>
     );
