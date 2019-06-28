@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('icomoon.eot?ktkjtc');
-  src:  url('icomoon.eot?ktkjtc#iefix') format('embedded-opentype'),
-    url('icomoon.ttf?ktkjtc') format('truetype'),
-    url('icomoon.woff?ktkjtc') format('woff'),
-    url('icomoon.svg?ktkjtc#icomoon') format('svg');
+  src:  url('icomoon.eot?kv60fu');
+  src:  url('icomoon.eot?kv60fu#iefix') format('embedded-opentype'),
+    url('icomoon.ttf?kv60fu') format('truetype'),
+    url('icomoon.woff?kv60fu') format('woff'),
+    url('icomoon.svg?kv60fu#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-star-full:before {
+  content: "\e9d9";
+}
 .icon-facebook:before {
   content: "\ea90";
 }

@@ -62,6 +62,10 @@
     font-size: 22px;
 }
 
+.start{
+    color: var(--yellowColor);
+}
+
 .area-employee{
     font-size: 30px;
     text-decoration: underline;
