@@ -1,13 +1,22 @@
 import React from 'react';
 
 import '../styles/ShowElement.css';
+import '../fonts/style.css';
 
-export default function ShowElements ({name,imgSrc,points}) {
+import imgTEAM from '../assets/WeAreTEAM.PNG';
+
+export default function ShowElements ({message,name,imgSrc,points}) {
     return (
-        <div className="container-element">
+      <div className="container-element">
+          <div className="container-front">
             <p className="name-element">{name}</p>
-            <img className="img-element" src={imgSrc} alt=""/>
-            <p className="points-element">{points}</p>
-        </div>
-    )
+            <img className="img-element" src={imgSrc} alt="" />
+            <p className="points-element"><span className="start icon-star-full"></span>{points}</p>
+          </div>
+          <div className="container-back">
+            <img  className="img-Team" src={imgTEAM} alt="Logo TEAM negative"/>
+            <h1 className="we-are-team">{message}</h1>
+          </div>
+      </div>
+    );
 }

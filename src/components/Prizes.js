@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import {BASE_LOCAL_ENDPOINT} from '../constants';
 import { NavLink } from 'react-router-dom';
-import Search from './Search';
 import ShowElements from './ShowElements';
+import Search from './Search';
 import axios from 'axios';
 import ModalAppPrize from './ModalAddPrize';
+
 import '../styles/Prizes.css';
 
 class Prizes extends Component {
@@ -92,6 +93,7 @@ class Prizes extends Component {
                         prizesFilter.map(({id, name, points, imgSrc }) =>
                             <NavLink key={id} to={`/prizes/${id}`}>
                                 <ShowElements
+                                    message="PRIZE!"
                                     key={id}
                                     name={name}
                                     imgSrc={imgSrc}

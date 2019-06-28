@@ -95,6 +95,7 @@ class Employees extends Component {
                     employeesFilter.map(({id,name,imgSrc,points}) =>
                     <NavLink key={id} to={`/employees/${id}`} className="employee-link">
                         <ShowElements
+                            message="WE ARE TEAM!"
                             key={id}
                             name={name}
                             imgSrc={imgSrc}
