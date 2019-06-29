@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 import React from 'react'
 import '../styles/ShowAchievements.css';
 
-
 const ShowAchievements = ({name,points,handleShowModal,handleShowDeleteMessage}) => {
-    return ( 
+    return (
         <li className="container-achievement">
             <div className="container-name-achievement">
 
@@ -20,30 +18,6 @@ const ShowAchievements = ({name,points,handleShowModal,handleShowDeleteMessage})
         </li>
      );
 }
- 
-export default ShowAchievements;
-
-=======
-import React from "react";
-
-import "../styles/ShowAchievements.css";
-
-function ShowAchievements({ name, points }) {
-  return (
-    <li className="container-achievement">
-      <h1 className="name-achievement">
-        {name}
-        <span className="points-achievement">
-          <span className="start icon-star-full" /> {points}
-        </span>
-      </h1>
-      <div className="container-achievement-buttons">
-        <button className="button-achievement-edit">Edit</button>
-        <button className="button-achievement-delete">Delete</button>
-      </div>
-    </li>
-  );
-}
 
 export default ShowAchievements;
->>>>>>> e6b20a7f7b1f21977cb96d40442d11c90796492d
+

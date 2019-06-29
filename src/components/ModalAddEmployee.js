@@ -34,10 +34,7 @@ class ModalAddEmployee extends Component {
             imgSrc: this.state.newEmployee.imgSrc,
         }
         this.props.createEmployee(e, employee);
-    }
-
-    
-  };
+      }
 
   render() {
     return (
