@@ -8,7 +8,7 @@
     border-radius: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
-    padding: 10px 10px;
+    padding: 10px 30px;
     box-shadow: 0px 0px 5px white;
     transition: all ease-in .2s;
 }
@@ -16,6 +16,10 @@
 .container-achievement:hover{
     transform: scale(1.05);
     background: rgba(37, 55, 70, .9);
+}
+
+.container-name-achievement{
+    width: 80%;
 }
 
 .name-achievement{
