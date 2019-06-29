@@ -27,10 +27,11 @@
     flex-wrap: wrap;
 }
 
-.modal-container h2{
+.add-employee-tittle, .add-prize-title{
     font-size: 82px;
     font-weight: 800;
     color: white;
+    text-align: center;
 }
 
 .modal-form{

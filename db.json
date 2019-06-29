@@ -119,6 +119,14 @@
       "area": "Sales",
       "imgSrc": "https://randomuser.me/api/portraits/women/44.jpg",
       "points": 1
+    },
+    {
+      "name": "santiago",
+      "job": "Developer",
+      "area": "FrontEnd",
+      "points": "4",
+      "imgSrc": "https://media.aws.alkosto.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/g/o/gow4portada.jpg",
+      "id": 16
     }
   ],
   "prizes": [
@@ -177,141 +185,141 @@
       "id": 1,
       "name": "Teamniversary (1)",
       "points": 2,
-      "created_at": "2019-06-27T06:02:10.881Z",
-      "updated_at": "2019-06-27T06:02:10.881Z"
+      "created_at": "2019-06-29T17:40:28.480Z",
+      "updated_at": "2019-06-29T17:40:28.480Z"
     },
     {
       "id": 2,
       "name": "Teamniversary (2)",
       "points": 3,
-      "created_at": "2019-06-27T06:02:10.888Z",
-      "updated_at": "2019-06-27T06:02:10.888Z"
+      "created_at": "2019-06-29T17:40:28.485Z",
+      "updated_at": "2019-06-29T17:40:28.485Z"
     },
     {
       "id": 3,
       "name": "Teamniversary (3)",
       "points": 4,
-      "created_at": "2019-06-27T06:02:10.894Z",
-      "updated_at": "2019-06-27T06:02:10.894Z"
+      "created_at": "2019-06-29T17:40:28.490Z",
+      "updated_at": "2019-06-29T17:40:28.490Z"
     },
     {
       "id": 4,
       "name": "Teamniversary (5+)",
       "points": 8,
-      "created_at": "2019-06-27T06:02:10.908Z",
-      "updated_at": "2019-06-27T06:02:10.908Z"
+      "created_at": "2019-06-29T17:40:28.496Z",
+      "updated_at": "2019-06-29T17:40:28.496Z"
     },
     {
       "id": 5,
       "name": "Teamniversary (10+)",
       "points": 20,
-      "created_at": "2019-06-27T06:02:10.915Z",
-      "updated_at": "2019-06-27T06:02:10.915Z"
+      "created_at": "2019-06-29T17:40:28.503Z",
+      "updated_at": "2019-06-29T17:40:28.503Z"
     },
     {
       "id": 6,
       "name": "Team Promotion",
       "points": 4,
-      "created_at": "2019-06-27T06:02:10.921Z",
-      "updated_at": "2019-06-27T06:02:10.921Z"
+      "created_at": "2019-06-29T17:40:28.507Z",
+      "updated_at": "2019-06-29T17:40:28.507Z"
     },
     {
       "id": 7,
       "name": "Lead Top Gun Lab training (per class)",
       "points": 1,
-      "created_at": "2019-06-27T06:02:10.928Z",
-      "updated_at": "2019-06-27T06:02:10.928Z"
+      "created_at": "2019-06-29T17:40:28.512Z",
+      "updated_at": "2019-06-29T17:40:28.512Z"
     },
     {
       "id": 8,
       "name": "Lead Internal Training (Tech/Team Talks)",
       "points": 1,
-      "created_at": "2019-06-27T06:02:10.947Z",
-      "updated_at": "2019-06-27T06:02:10.947Z"
+      "created_at": "2019-06-29T17:40:28.519Z",
+      "updated_at": "2019-06-29T17:40:28.519Z"
     },
     {
       "id": 9,
       "name": "Recruitment Support (per precess)",
       "points": 1,
-      "created_at": "2019-06-27T06:02:10.958Z",
-      "updated_at": "2019-06-27T06:02:10.958Z"
+      "created_at": "2019-06-29T17:40:28.524Z",
+      "updated_at": "2019-06-29T17:40:28.524Z"
     },
     {
       "id": 10,
       "name": "Client Kudos",
       "points": 1,
-      "created_at": "2019-06-27T06:02:10.966Z",
-      "updated_at": "2019-06-27T06:02:10.966Z"
+      "created_at": "2019-06-29T17:40:28.529Z",
+      "updated_at": "2019-06-29T17:40:28.529Z"
     },
     {
       "id": 11,
       "name": "Teammates Kudos",
       "points": 1,
-      "created_at": "2019-06-27T06:02:10.976Z",
-      "updated_at": "2019-06-27T06:02:10.976Z"
+      "created_at": "2019-06-29T17:40:28.533Z",
+      "updated_at": "2019-06-29T17:40:28.533Z"
     },
     {
       "id": 12,
       "name": "Team Award",
       "points": 2,
-      "created_at": "2019-06-27T06:02:10.983Z",
-      "updated_at": "2019-06-27T06:02:10.983Z"
+      "created_at": "2019-06-29T17:40:28.537Z",
+      "updated_at": "2019-06-29T17:40:28.537Z"
     },
     {
       "id": 13,
       "name": "English Level Achievement",
       "points": 2,
-      "created_at": "2019-06-27T06:02:10.990Z",
-      "updated_at": "2019-06-27T06:02:10.990Z"
+      "created_at": "2019-06-29T17:40:28.542Z",
+      "updated_at": "2019-06-29T17:40:28.542Z"
     },
     {
       "id": 14,
       "name": "Certification Achievement",
       "points": 2,
-      "created_at": "2019-06-27T06:02:10.999Z",
-      "updated_at": "2019-06-27T06:02:10.999Z"
+      "created_at": "2019-06-29T17:40:28.547Z",
+      "updated_at": "2019-06-29T17:40:28.547Z"
     },
     {
       "id": 15,
       "name": "Speaking in external conferences and meet ups (per event)",
       "points": 4,
-      "created_at": "2019-06-27T06:02:11.008Z",
-      "updated_at": "2019-06-27T06:02:11.008Z"
+      "created_at": "2019-06-29T17:40:28.552Z",
+      "updated_at": "2019-06-29T17:40:28.552Z"
     },
     {
       "id": 16,
       "name": "Representing the company in external activities and contests (per event)",
       "points": 1,
-      "created_at": "2019-06-27T06:02:11.015Z",
-      "updated_at": "2019-06-27T06:02:11.015Z"
+      "created_at": "2019-06-29T17:40:28.557Z",
+      "updated_at": "2019-06-29T17:40:28.557Z"
     },
     {
       "id": 17,
       "name": "Pre-sales participation",
       "points": 2,
-      "created_at": "2019-06-27T06:02:11.037Z",
-      "updated_at": "2019-06-27T06:02:11.037Z"
+      "created_at": "2019-06-29T17:40:28.562Z",
+      "updated_at": "2019-06-29T17:40:28.562Z"
     },
     {
       "id": 18,
       "name": "Mentoring New commers (per new customer)",
       "points": 2,
-      "created_at": "2019-06-27T06:02:11.045Z",
-      "updated_at": "2019-06-27T06:02:11.045Z"
+      "created_at": "2019-06-29T17:40:28.567Z",
+      "updated_at": "2019-06-29T17:40:28.567Z"
     },
     {
       "id": 19,
       "name": "Social Media Participation (post)",
       "points": 1,
-      "created_at": "2019-06-27T06:02:11.052Z",
-      "updated_at": "2019-06-27T06:02:11.052Z"
+      "created_at": "2019-06-29T17:40:28.572Z",
+      "updated_at": "2019-06-29T17:40:28.572Z"
     },
     {
       "id": 20,
       "name": "Social Media Participation (written content)",
       "points": 2,
-      "created_at": "2019-06-27T06:02:11.058Z",
-      "updated_at": "2019-06-27T06:02:11.058Z"
+      "created_at": "2019-06-29T17:40:28.578Z",
+      "updated_at": "2019-06-29T17:40:28.578Z"
     }
   ]
 }

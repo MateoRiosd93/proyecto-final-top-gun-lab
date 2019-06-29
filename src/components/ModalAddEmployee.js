@@ -33,18 +33,17 @@ class ModalAddEmployee extends Component {
             points: this.state.newEmployee.points,
             imgSrc: this.state.newEmployee.imgSrc,
         }
+
         this.props.createEmployee(e, employee);
     }
-
-    
-  };
+  
 
   render() {
     return (
       <div className="modal">
         <div className="modal-container">
           <aside>
-            <h2>You're adding a new employee!</h2>
+            <h2 className="add-employee-tittle">You're adding a new Employee!</h2>
           </aside>
           <form className="modal-form" onSubmit={e => this.createEmployee(e)}>
             <div className="modal-field-container">

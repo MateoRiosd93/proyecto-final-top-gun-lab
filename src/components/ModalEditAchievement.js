@@ -71,7 +71,7 @@ export default class ModalEditAchievement extends Component {
           </form>
           <button
             className="close-modal-button close-achievement"
-            onClick={() => this.props.handleShowModal()}
+            onClick={() => this.props.handleShowEditModal()}
           >
             X
           </button>
