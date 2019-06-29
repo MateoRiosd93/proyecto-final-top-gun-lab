@@ -7,7 +7,7 @@ import ModalEditAchievement from "./ModalEditAchievement";
 import DeleteMessage from './DeleteMessage';
 import "../styles/Achievements.css";
 
-export default class Achievements extends Component {
+class Achievements extends Component {
   state = {
     achievements: [],
     isLoad: false,
@@ -153,3 +153,5 @@ export default class Achievements extends Component {
     );
   }
 }
+
+export default Achievements;

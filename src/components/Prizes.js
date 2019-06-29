@@ -1,112 +1,122 @@
-import React, { Component } from 'react';
-import {BASE_LOCAL_ENDPOINT} from '../constants';
-import { NavLink } from 'react-router-dom';
-import ShowElements from './ShowElements';
-import Search from './Search';
-import axios from 'axios';
-import ModalAppPrize from './ModalAddPrize';
+import React, { Component } from "react";
+import { BASE_LOCAL_ENDPOINT } from "../constants";
+import { NavLink } from "react-router-dom";
+import ShowElements from "./ShowElements";
+import Search from "./Search";
+import axios from "axios";
+import ModalAppPrize from "./ModalAddPrize";
 
-import '../styles/Prizes.css';
+import "../styles/Prizes.css";
 
 class Prizes extends Component {
+  state = {
+    prizes: [],
+    error: false,
+    searchName: "",
+    showModal: false,
+    createPrizeError: false
+  };
 
-    state = {
-        prizes: [],
-        error: false,
-        searchName:'',
-        showModal: false,
-        createPrizeError:false
-    }
-
-
-    getPrizesDB = () => {
-        axios.get(`${BASE_LOCAL_ENDPOINT}prizes`)
-        .then(response => {
-            const prizes = response.data.sort((element1,element2) => element1.points - element2.points)
-            this.setState({
-                prizes
-             });
-        })
-        .catch(error => {
-            this.setState({
-                error: true
-            })
-        });
-    }
-
-
-    componentDidMount = () => {
-        this.getPrizesDB();
-    }
-
-    searchNames = letter => {
-        const searchName = letter;
+  getPrizesDB = () => {
+    axios
+      .get(`${BASE_LOCAL_ENDPOINT}prizes`)
+      .then(response => {
+        const prizes = response.data.sort(
+          (element1, element2) => element1.points - element2.points
+        );
         this.setState({
-            searchName
-        })
-    }
+          prizes
+        });
+      })
+      .catch(error => {
+        this.setState({
+          error: true
+        });
+      });
+  };
 
+  componentDidMount = () => {
+    this.getPrizesDB();
+  };
 
-    handleShowModal = e =>{
-        this.setState(prevState =>({
-            ...prevState,
-            showModal: !prevState.showModal
-        }))
-    }
+  searchNames = letter => {
+    const searchName = letter;
+    this.setState({
+      searchName
+    });
+  };
 
-    createPrize =  ( e, prize )  => {
-        const {name, description, points, imgSrc} = prize;
-        axios.post(`${BASE_LOCAL_ENDPOINT}prizes`, {
-            name,
-            description,
-            points,
-            imgSrc
-        }, {
-            headers: { "Content-Type": "application/json"}
-        })
-        .then (() => {this.getPrizesDB()} )
-        .catch(() => {this.setState({createPrizeError:true})})
+  handleShowModal = e => {
+    this.setState(prevState => ({
+      ...prevState,
+      showModal: !prevState.showModal
+    }));
+  };
 
-        this.handleShowModal(e);
-    }
+  createPrize = (e, prize) => {
+    const { name, description, points, imgSrc } = prize;
+    axios
+      .post(
+        `${BASE_LOCAL_ENDPOINT}prizes`,
+        {
+          name,
+          description,
+          points,
+          imgSrc
+        },
+        {
+          headers: { "Content-Type": "application/json" }
+        }
+      )
+      .then(() => {
+        this.getPrizesDB();
+      })
+      .catch(() => {
+        this.setState({ createPrizeError: true });
+      });
 
-    render() {
-        const {prizes,searchName, showModal} = this.state;
-        const prizesFilter = prizes.filter(prize => prize.name.toLowerCase().includes(searchName.toLowerCase()));
-        return (
-            <div className="container-search-prizes">
-                <div className="container-search-add">
-                    <Search
-                        searchNames={this.searchNames}
-                        mensaje='Do you want to search for an Prize?'
-                    />
-                    <button className="buton-add" onClick={this.handleShowModal}> ADD </button>
-                </div>
-                <div className="container-prizes">
-                    {
-                        (showModal && <ModalAppPrize
-                            handleShowModal={this.handleShowModal}
-                            createPrize={this.createPrize}
-                                       />)
-                    }
-                    {
-                        prizesFilter.map(({id, name, points, imgSrc }) =>
-                            <NavLink key={id} to={`/prizes/${id}`}>
-                                <ShowElements
-                                    message="PRIZE!"
-                                    key={id}
-                                    name={name}
-                                    imgSrc={imgSrc}
-                                    points={points}
-                                    />
-                            </NavLink>
-                        )
-                    }
-                </div>
-            </div>
-        )
-    }
+    this.handleShowModal(e);
+  };
+
+  render() {
+    const { prizes, searchName, showModal } = this.state;
+    const prizesFilter = prizes.filter(prize =>
+      prize.name.toLowerCase().includes(searchName.toLowerCase())
+    );
+    return (
+      <div className="container-search-prizes">
+        <div className="container-search-add">
+          <Search
+            searchNames={this.searchNames}
+            mensaje="Do you want to search for an Prize?"
+          />
+          <button
+            className="buton-add"
+            onClick={this.handleShowModal}> ADD
+          </button>
+        </div>
+        <div className="container-prizes">
+          {showModal && (
+            <ModalAppPrize
+              handleShowModal={this.handleShowModal}
+              createPrize={this.createPrize}
+            />
+          )}
+          {prizesFilter.map(({ id, name, points, imgSrc }) => (
+            <NavLink key={id} to={`/prizes/${id}`}>
+              <ShowElements
+                message="PRIZE!"
+                key={id}
+                name={name}
+                imgSrc={imgSrc}
+                points={points}
+              />
+            </NavLink>
+          ))}
+        </div>
+      </div>
+    );
+  }
 }
-
 
 export default Prizes;
