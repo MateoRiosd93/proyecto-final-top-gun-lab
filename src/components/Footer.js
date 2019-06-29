@@ -11,26 +11,95 @@ function Footer() {
         <div className="info">
           <h3 className="title-info">LOCATIONS</h3>
           <p className="text-info">United States</p>
-          <p className="text-info">Ukraine</p>
-          <p className="text-info">Colombia</p>
-          <p className="text-info">Poland</p>
-          <p className="text-info">Vietnam</p>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            className="text-info-link"
+            href="https://www.teaminternational.com/locations/ukraine/">Ukraine
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            className="text-info-link"
+            href="https://www.teaminternational.com/locations/colombia/">Colombia
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            className="text-info-link"
+            href="https://www.teaminternational.com/locations/poland/">Poland
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            className="text-info-link"
+            href="https://www.teaminternational.com/locations/vietnam/">Vietnam
+          </a>
         </div>
+
         <div className="info">
           <h3 className="title-info">SERVICES</h3>
-          <p className="text-info">Custom Software Development</p>
-          <p className="text-info">Automation Services</p>
-          <p className="text-info">Software QA{` & `}Testing</p>
-          <p className="text-info">Microsoft Services</p>
-          <p className="text-info">Data Analytics Services</p>
-          <p className="text-info">Managed IT Services</p>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            className="text-info-link"
+            href="https://www.teaminternational.com/services/custom-software-development/">Custom Software Development
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            className="text-info-link"
+            href="https://www.teaminternational.com/services/intelligent-automation-services-rpa/">Automation Services
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            className="text-info-link"
+            href="https://www.teaminternational.com/services/software-qa-and-testing/">Software QA{` & `}Testing
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            className="text-info-link"
+            href="https://www.teaminternational.com/services/microsoft-services/">Microsoft Services
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            className="text-info-link"
+            href="https://www.teaminternational.com/services/data-analytics-services/">Data Analytics Services
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            className="text-info-link"
+            href="https://www.teaminternational.com/services/managed-it-services/">Managed IT Services
+          </a>
         </div>
         <div className="info">
           <h3 className="title-info">RESOURCES</h3>
-          <p className="text-info">Blog</p>
-          <p className="text-info">White Papers</p>
-          <p className="text-info">Case Studies</p>
-          <p className="text-info">News</p>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            className="text-info-link"
+            href="https://www.teaminternational.com/blog/">Blog
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            className="text-info-link"
+            href="https://www.teaminternational.com/white-papers/">White Papers
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            className="text-info-link"
+            href="https://www.teaminternational.com/case-studies/">Case Studies
+          </a>
+          <a
+            className="text-info-link"
+            href="https://www.teaminternational.com/press-room/">News
+          </a>
         </div>
         <div className="info">
           <h3 className="title-info">CONTACT US</h3>
@@ -49,7 +118,12 @@ function Footer() {
         <div className="container-lenguage-follow">
           <div>
             <h3 className="title-info">LENGUAGES</h3>
-            <p className="text-info">English</p>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              className="text-info-link"
+              href="https://www.teaminternational.com/">English
+            </a>
           </div>
           <div className="container-follow">
             <h3 className="title-info">FOLLOW US</h3>
@@ -98,7 +172,20 @@ function Footer() {
           <p className="text-info">
             Copyright © TEAM International Services Inc. All Rights Reserved.
           </p>
-          <h3 className="text-info-privacy">Sitemap | Privacy Policy</h3>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            className="text-info-privacy"
+            href="https://www.teaminternational.com/sitemap/">Sitemap
+
+          </a>
+          <span className="barra"> | </span>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            className="text-info-privacy"
+            href="https://www.teaminternational.com/privacy-policy/">Privacy Policy
+          </a>
         </div>
         <div className="container-button">
           <button className="button-footer" />

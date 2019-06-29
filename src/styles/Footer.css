@@ -37,6 +37,18 @@
     font-size: 13px;
 }
 
+.text-info-link{
+    display: block;
+    margin: 1rem 0;
+    color: white;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.text-info-link:hover{
+    color: rgba(158, 164, 168, 0.9);
+}
+
 .text-contact{
     margin: 0;
     font-size: 13px;
@@ -64,6 +76,7 @@
 }
 
 .container-copyright-img{
+    margin-bottom: 1rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -75,9 +88,15 @@
     margin-left: 3.6rem;
 }
 
+.barra{
+     color: white;
+     font-weight: bold;
+}
 .text-info-privacy{
     font-size: 14px;
+    font-weight: bold;
     color: white;
+    text-decoration: none;
 }
 
 .container-button{
