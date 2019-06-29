@@ -26,16 +26,17 @@ class ModalAddEmployee extends Component {
   createEmployee = e => {
     e.preventDefault();
 
-    const employee = {
-      name: this.state.newEmployee.name,
-      job: this.state.newEmployee.job,
-      area: this.state.newEmployee.area,
-      points: this.state.newEmployee.points,
-      imgSrc: this.state.newEmployee.imgSrc
-    };
+        const employee={
+            name: this.state.newEmployee.name,
+            job: this.state.newEmployee.job,
+            area: this.state.newEmployee.area,
+            points: this.state.newEmployee.points,
+            imgSrc: this.state.newEmployee.imgSrc,
+        }
+        this.props.createEmployee(e, employee);
+    }
 
-    console.log("preparando...", employee);
-    this.props.createEmployee(e, employee);
+    
   };
 
   render() {
