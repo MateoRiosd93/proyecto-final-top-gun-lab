@@ -176,102 +176,142 @@
     {
       "id": 1,
       "name": "Teamniversary (1)",
-      "points": 2
+      "points": 2,
+      "created_at": "2019-06-27T06:02:10.881Z",
+      "updated_at": "2019-06-27T06:02:10.881Z"
     },
     {
       "id": 2,
       "name": "Teamniversary (2)",
-      "points": 3
+      "points": 3,
+      "created_at": "2019-06-27T06:02:10.888Z",
+      "updated_at": "2019-06-27T06:02:10.888Z"
     },
     {
       "id": 3,
       "name": "Teamniversary (3)",
-      "points": 4
+      "points": 4,
+      "created_at": "2019-06-27T06:02:10.894Z",
+      "updated_at": "2019-06-27T06:02:10.894Z"
     },
     {
       "id": 4,
       "name": "Teamniversary (5+)",
-      "points": 8
+      "points": 8,
+      "created_at": "2019-06-27T06:02:10.908Z",
+      "updated_at": "2019-06-27T06:02:10.908Z"
     },
     {
       "id": 5,
       "name": "Teamniversary (10+)",
-      "points": 20
+      "points": 20,
+      "created_at": "2019-06-27T06:02:10.915Z",
+      "updated_at": "2019-06-27T06:02:10.915Z"
     },
     {
       "id": 6,
       "name": "Team Promotion",
-      "points": 4
+      "points": 4,
+      "created_at": "2019-06-27T06:02:10.921Z",
+      "updated_at": "2019-06-27T06:02:10.921Z"
     },
     {
       "id": 7,
       "name": "Lead Top Gun Lab training (per class)",
-      "points": 1
+      "points": 1,
+      "created_at": "2019-06-27T06:02:10.928Z",
+      "updated_at": "2019-06-27T06:02:10.928Z"
     },
     {
       "id": 8,
       "name": "Lead Internal Training (Tech/Team Talks)",
-      "points": 1
+      "points": 1,
+      "created_at": "2019-06-27T06:02:10.947Z",
+      "updated_at": "2019-06-27T06:02:10.947Z"
     },
     {
       "id": 9,
       "name": "Recruitment Support (per precess)",
-      "points": 1
+      "points": 1,
+      "created_at": "2019-06-27T06:02:10.958Z",
+      "updated_at": "2019-06-27T06:02:10.958Z"
     },
     {
       "id": 10,
       "name": "Client Kudos",
-      "points": 1
+      "points": 1,
+      "created_at": "2019-06-27T06:02:10.966Z",
+      "updated_at": "2019-06-27T06:02:10.966Z"
     },
     {
       "id": 11,
       "name": "Teammates Kudos",
-      "points": 1
+      "points": 1,
+      "created_at": "2019-06-27T06:02:10.976Z",
+      "updated_at": "2019-06-27T06:02:10.976Z"
     },
     {
       "id": 12,
       "name": "Team Award",
-      "points": 2
+      "points": 2,
+      "created_at": "2019-06-27T06:02:10.983Z",
+      "updated_at": "2019-06-27T06:02:10.983Z"
     },
     {
       "id": 13,
       "name": "English Level Achievement",
-      "points": 2
+      "points": 2,
+      "created_at": "2019-06-27T06:02:10.990Z",
+      "updated_at": "2019-06-27T06:02:10.990Z"
     },
     {
       "id": 14,
       "name": "Certification Achievement",
-      "points": 2
+      "points": 2,
+      "created_at": "2019-06-27T06:02:10.999Z",
+      "updated_at": "2019-06-27T06:02:10.999Z"
     },
     {
       "id": 15,
       "name": "Speaking in external conferences and meet ups (per event)",
-      "points": 4
+      "points": 4,
+      "created_at": "2019-06-27T06:02:11.008Z",
+      "updated_at": "2019-06-27T06:02:11.008Z"
     },
     {
       "id": 16,
       "name": "Representing the company in external activities and contests (per event)",
-      "points": 1
+      "points": 1,
+      "created_at": "2019-06-27T06:02:11.015Z",
+      "updated_at": "2019-06-27T06:02:11.015Z"
     },
     {
       "id": 17,
       "name": "Pre-sales participation",
-      "points": 2
+      "points": 2,
+      "created_at": "2019-06-27T06:02:11.037Z",
+      "updated_at": "2019-06-27T06:02:11.037Z"
     },
     {
       "id": 18,
       "name": "Mentoring New commers (per new customer)",
-      "points": 2
+      "points": 2,
+      "created_at": "2019-06-27T06:02:11.045Z",
+      "updated_at": "2019-06-27T06:02:11.045Z"
     },
     {
       "id": 19,
       "name": "Social Media Participation (post)",
-      "points": 1
+      "points": 1,
+      "created_at": "2019-06-27T06:02:11.052Z",
+      "updated_at": "2019-06-27T06:02:11.052Z"
     },
     {
       "id": 20,
       "name": "Social Media Participation (written content)",
-      "points": 2
+      "points": 2,
+      "created_at": "2019-06-27T06:02:11.058Z",
+      "updated_at": "2019-06-27T06:02:11.058Z"
     }
   ]
 }
