@@ -28,7 +28,7 @@ class Prizes extends Component {
           prizes
         });
       })
-      .catch(error => {
+      .catch(() => {
         this.setState({
           error: true
         });

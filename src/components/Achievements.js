@@ -4,7 +4,8 @@ import Search from "./Search";
 import axios from "axios";
 import ShowAchievements from "./ShowAchievements";
 import ModalEditAchievement from "./ModalEditAchievement";
-import DeleteMessage from './DeleteMessage';
+import DeleteMessage from "./DeleteMessage";
+import ModalAddAchievement from "./ModalAddAchievement";
 import "../styles/Achievements.css";
 
 class Achievements extends Component {
@@ -12,10 +13,11 @@ class Achievements extends Component {
     achievements: [],
     isLoad: false,
     searchName: "",
-    showModal: false,
+    showAddModal: false,
+    showEditModal: false,
     showDeleteMessage: false,
     idAchievement: "",
-    error:""
+    error: ""
   };
 
   getAchievementsBD = () => {
@@ -33,10 +35,6 @@ class Achievements extends Component {
       });
   };
 
-  componentDidMount() {
-    this.getAchievementsBD();
-  }
-
   searchNames = letter => {
     const searchName = letter;
     this.setState({
@@ -44,20 +42,20 @@ class Achievements extends Component {
     });
   };
 
-  handleShowModal = (id = null) => {
+  handleShowEditModal = (id = null) => {
     const idAchievement = id;
 
     this.setState(prevState => ({
       ...prevState,
-      showModal: !prevState.showModal,
+      showEditModal: !prevState.showEditModal,
       idAchievement
     }));
   };
 
-  editAchievement = ( name, points ) => {
+  editAchievement = (name, points) => {
     const id = this.state.idAchievement;
 
-    console.log('Componente Achievement');
+    console.log("Componente Achievement");
     console.log(`name ${name}, points ${points}, id ${id}`);
 
     axios
@@ -80,43 +78,79 @@ class Achievements extends Component {
         });
       });
 
-    this.handleShowModal();
+    this.handleShowEditModal();
   };
 
-  handleShowDeleteMessage = (id=null) => {
-    const idAchievement = id
+  handleShowDeleteMessage = (id = null) => {
+    const idAchievement = id;
     this.setState(prevState => ({
       ...prevState,
       showDeleteMessage: !prevState.showDeleteMessage,
       idAchievement
-    }))
-  }
+    }));
+  };
 
   deleteAchievement = () => {
-    const {idAchievement:id} = this.state;
+    const { idAchievement: id } = this.state;
 
-    axios.delete(`${BASE_LOCAL_ENDPOINT}achievements/${id}`)
-    .then(() => {
-      this.getAchievementsBD();
-      console.log('achievement eliminado');
-    })
+    axios
+      .delete(`${BASE_LOCAL_ENDPOINT}achievements/${id}`)
+      .then(() => {
+        this.getAchievementsBD();
+        console.log("achievement eliminado");
+      })
+      .catch(err => {
+        this.setState({
+          error: err.message
+        });
+      });
+    this.handleShowDeleteMessage();
+  };
+
+  handleShowAddModal = () => {
+    this.setState(prevState => ({
+      ...prevState,
+      showAddModal: !prevState.showAddModal
+    }));
+  };
+
+  createAchievement = achievement => {
+    const { name, points } = achievement;
+    axios.post(
+      `${BASE_LOCAL_ENDPOINT}achievements`,
+      {
+        name,
+        points
+      },
+      {
+        headers: { "Content-Type": "application/json" }
+      }
+    )
+    .then(() => this.getAchievementsBD())
     .catch(err => {
       this.setState({
         error: err.message
       });
     });
-    this.handleShowDeleteMessage();
+
+    this.handleShowAddModal();
+  };
+
+  componentDidMount() {
+    this.getAchievementsBD();
   }
 
-  
-
   render() {
-    const { achievements, searchName, showModal, showDeleteMessage, idAchievement } = this.state;
+    const {
+      achievements,
+      searchName,
+      showAddModal,
+      showEditModal,
+      showDeleteMessage
+    } = this.state;
     const achievementsFilter = achievements.filter(achievement =>
       achievement.name.toLowerCase().includes(searchName.toLowerCase())
     );
-
-    console.log(idAchievement);
 
     return (
       <div className="container-achievements">
@@ -125,27 +159,36 @@ class Achievements extends Component {
             searchNames={this.searchNames}
             mensaje="This is our Achievements!"
           />
+          <button className="buton-add" onClick={this.handleShowAddModal}>
+            ADD
+          </button>
         </div>
-        {showModal && (
+        {showAddModal && (
+          <ModalAddAchievement 
+            handleShowAddModal={this.handleShowAddModal} 
+            createAchievement={this.createAchievement}
+            />
+        )}
+        {showEditModal && (
           <ModalEditAchievement
-            handleShowModal={this.handleShowModal}
+            handleShowEditModal={this.handleShowEditModal}
             editAchievement={this.editAchievement}
           />
         )}
-        {
-          showDeleteMessage && (<DeleteMessage 
+        {showDeleteMessage && (
+          <DeleteMessage
             handleShowDeleteMessage={this.handleShowDeleteMessage}
             deleteAchievement={this.deleteAchievement}
-                                />)
-        }
+          />
+        )}
         <ul className="list-achievements">
           {achievementsFilter.map(({ id, name, points }) => (
             <ShowAchievements
               key={id}
               name={name}
               points={points}
-              handleShowModal={() => this.handleShowModal(id)}
-              handleShowDeleteMessage={()=>this.handleShowDeleteMessage(id)}
+              handleShowEditModal={() => this.handleShowEditModal(id)}
+              handleShowDeleteMessage={() => this.handleShowDeleteMessage(id)}
             />
           ))}
         </ul>

@@ -119,6 +119,14 @@
       "area": "Sales",
       "imgSrc": "https://randomuser.me/api/portraits/women/44.jpg",
       "points": 1
+    },
+    {
+      "name": "santiago",
+      "job": "Developer",
+      "area": "FrontEnd",
+      "points": "4",
+      "imgSrc": "https://media.aws.alkosto.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/g/o/gow4portada.jpg",
+      "id": 16
     }
   ],
   "prizes": [
@@ -174,99 +182,222 @@
   ],
   "achievements": [
     {
+<<<<<<< HEAD
+      "id": 1,
+      "name": "Teamniversary (1)",
+      "points": 2,
+      "created_at": "2019-06-29T17:40:28.480Z",
+      "updated_at": "2019-06-29T17:40:28.480Z"
+    },
+    {
+      "id": 2,
+      "name": "Teamniversary (2)",
+      "points": 3,
+      "created_at": "2019-06-29T17:40:28.485Z",
+      "updated_at": "2019-06-29T17:40:28.485Z"
+=======
       "name": "Prueba ",
       "points": "1",
       "id": 2
+>>>>>>> 36d7aeba31dfba4955a63588b79f38f3cec7c397
     },
     {
       "id": 3,
       "name": "Teamniversary (3)",
+<<<<<<< HEAD
+      "points": 4,
+      "created_at": "2019-06-29T17:40:28.490Z",
+      "updated_at": "2019-06-29T17:40:28.490Z"
+=======
       "points": 4
+>>>>>>> 36d7aeba31dfba4955a63588b79f38f3cec7c397
     },
     {
       "id": 4,
       "name": "Teamniversary (5+)",
+<<<<<<< HEAD
+      "points": 8,
+      "created_at": "2019-06-29T17:40:28.496Z",
+      "updated_at": "2019-06-29T17:40:28.496Z"
+=======
       "points": 8
+>>>>>>> 36d7aeba31dfba4955a63588b79f38f3cec7c397
     },
     {
       "id": 5,
       "name": "Teamniversary (10+)",
+<<<<<<< HEAD
+      "points": 20,
+      "created_at": "2019-06-29T17:40:28.503Z",
+      "updated_at": "2019-06-29T17:40:28.503Z"
+=======
       "points": 20
+>>>>>>> 36d7aeba31dfba4955a63588b79f38f3cec7c397
     },
     {
       "id": 6,
       "name": "Team Promotion",
+<<<<<<< HEAD
+      "points": 4,
+      "created_at": "2019-06-29T17:40:28.507Z",
+      "updated_at": "2019-06-29T17:40:28.507Z"
+=======
       "points": 4
+>>>>>>> 36d7aeba31dfba4955a63588b79f38f3cec7c397
     },
     {
       "id": 7,
       "name": "Lead Top Gun Lab training (per class)",
+<<<<<<< HEAD
+      "points": 1,
+      "created_at": "2019-06-29T17:40:28.512Z",
+      "updated_at": "2019-06-29T17:40:28.512Z"
+=======
       "points": 1
+>>>>>>> 36d7aeba31dfba4955a63588b79f38f3cec7c397
     },
     {
       "id": 8,
       "name": "Lead Internal Training (Tech/Team Talks)",
+<<<<<<< HEAD
+      "points": 1,
+      "created_at": "2019-06-29T17:40:28.519Z",
+      "updated_at": "2019-06-29T17:40:28.519Z"
+=======
       "points": 1
+>>>>>>> 36d7aeba31dfba4955a63588b79f38f3cec7c397
     },
     {
       "id": 9,
       "name": "Recruitment Support (per precess)",
+<<<<<<< HEAD
+      "points": 1,
+      "created_at": "2019-06-29T17:40:28.524Z",
+      "updated_at": "2019-06-29T17:40:28.524Z"
+=======
       "points": 1
+>>>>>>> 36d7aeba31dfba4955a63588b79f38f3cec7c397
     },
     {
       "id": 10,
       "name": "Client Kudos",
+<<<<<<< HEAD
+      "points": 1,
+      "created_at": "2019-06-29T17:40:28.529Z",
+      "updated_at": "2019-06-29T17:40:28.529Z"
+=======
       "points": 1
+>>>>>>> 36d7aeba31dfba4955a63588b79f38f3cec7c397
     },
     {
       "id": 11,
       "name": "Teammates Kudos",
+<<<<<<< HEAD
+      "points": 1,
+      "created_at": "2019-06-29T17:40:28.533Z",
+      "updated_at": "2019-06-29T17:40:28.533Z"
+=======
       "points": 1
+>>>>>>> 36d7aeba31dfba4955a63588b79f38f3cec7c397
     },
     {
       "id": 12,
       "name": "Team Award",
+<<<<<<< HEAD
+      "points": 2,
+      "created_at": "2019-06-29T17:40:28.537Z",
+      "updated_at": "2019-06-29T17:40:28.537Z"
+=======
       "points": 2
+>>>>>>> 36d7aeba31dfba4955a63588b79f38f3cec7c397
     },
     {
       "id": 13,
       "name": "English Level Achievement",
+<<<<<<< HEAD
+      "points": 2,
+      "created_at": "2019-06-29T17:40:28.542Z",
+      "updated_at": "2019-06-29T17:40:28.542Z"
+=======
       "points": 2
+>>>>>>> 36d7aeba31dfba4955a63588b79f38f3cec7c397
     },
     {
       "id": 14,
       "name": "Certification Achievement",
+<<<<<<< HEAD
+      "points": 2,
+      "created_at": "2019-06-29T17:40:28.547Z",
+      "updated_at": "2019-06-29T17:40:28.547Z"
+=======
       "points": 2
+>>>>>>> 36d7aeba31dfba4955a63588b79f38f3cec7c397
     },
     {
       "id": 15,
       "name": "Speaking in external conferences and meet ups (per event)",
+<<<<<<< HEAD
+      "points": 4,
+      "created_at": "2019-06-29T17:40:28.552Z",
+      "updated_at": "2019-06-29T17:40:28.552Z"
+=======
       "points": 4
+>>>>>>> 36d7aeba31dfba4955a63588b79f38f3cec7c397
     },
     {
       "id": 16,
       "name": "Representing the company in external activities and contests (per event)",
+<<<<<<< HEAD
+      "points": 1,
+      "created_at": "2019-06-29T17:40:28.557Z",
+      "updated_at": "2019-06-29T17:40:28.557Z"
+=======
       "points": 1
+>>>>>>> 36d7aeba31dfba4955a63588b79f38f3cec7c397
     },
     {
       "id": 17,
       "name": "Pre-sales participation",
+<<<<<<< HEAD
+      "points": 2,
+      "created_at": "2019-06-29T17:40:28.562Z",
+      "updated_at": "2019-06-29T17:40:28.562Z"
+=======
       "points": 2
+>>>>>>> 36d7aeba31dfba4955a63588b79f38f3cec7c397
     },
     {
       "id": 18,
       "name": "Mentoring New commers (per new customer)",
+<<<<<<< HEAD
+      "points": 2,
+      "created_at": "2019-06-29T17:40:28.567Z",
+      "updated_at": "2019-06-29T17:40:28.567Z"
+=======
       "points": 2
+>>>>>>> 36d7aeba31dfba4955a63588b79f38f3cec7c397
     },
     {
       "id": 19,
       "name": "Social Media Participation (post)",
+<<<<<<< HEAD
+      "points": 1,
+      "created_at": "2019-06-29T17:40:28.572Z",
+      "updated_at": "2019-06-29T17:40:28.572Z"
+=======
       "points": 1
+>>>>>>> 36d7aeba31dfba4955a63588b79f38f3cec7c397
     },
     {
       "id": 20,
       "name": "Social Media Participation (written content)",
+<<<<<<< HEAD
+      "points": 2,
+      "created_at": "2019-06-29T17:40:28.578Z",
+      "updated_at": "2019-06-29T17:40:28.578Z"
+=======
       "points": 2
+>>>>>>> 36d7aeba31dfba4955a63588b79f38f3cec7c397
     }
   ]
 }

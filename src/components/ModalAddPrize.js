@@ -37,7 +37,7 @@ class ModalAddPrize extends Component {
       <div className="modal">
         <div className="modal-container">
           <aside>
-            <h2>You're adding a new Prize!</h2>
+            <h2 className="add-prize-title">You're adding a new Prize!</h2>
           </aside>
           <form className="modal-form" onSubmit={e => this.createPrize(e)}>
             <div className="modal-field-container">

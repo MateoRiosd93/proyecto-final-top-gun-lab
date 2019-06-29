@@ -3,7 +3,7 @@ import "../styles/DeleteModalMessage.css";
 
 const DeleteMessage = ({handleShowDeleteMessage,deleteAchievement}) => {
   return (
-    <div className="modal-delete-message">
+    <div className="modal">
       <div className="container-delete-message">
         <div className="container-message">
           <h2>Are you sure?</h2>
