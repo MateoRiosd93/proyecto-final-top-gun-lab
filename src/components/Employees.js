@@ -5,6 +5,7 @@ import { BASE_LOCAL_ENDPOINT } from "../constants";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 import ModalAddEmployee from "./ModalAddEmployee";
+import LoadMessage from "./LoadMessage";
 
 import "../styles/Employees.css";
 
@@ -86,6 +87,10 @@ class Employees extends Component {
     const employeesFilter = employees.filter(employee =>
       employee.name.toLowerCase().includes(searchName.toLowerCase())
     );
+
+    if( employees.length === 0 ){
+      return (<LoadMessage/>)
+    }
     return (
       <div className="container-search-employees">
         <div className="container-search-add">
@@ -107,7 +112,11 @@ class Employees extends Component {
             />
           )}
           {employeesFilter.map(({ id, name, imgSrc, points }) => (
-            <NavLink key={id} to={`/employees/${id}`} className="employee-link">
+            <NavLink 
+              key={id} 
+              to={`/employees/${id}`} 
+              className="employee-link"
+            >
               <ShowElements
                 message="WE ARE TEAM!"
                 key={id}

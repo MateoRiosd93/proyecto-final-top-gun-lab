@@ -12,9 +12,9 @@ class Search extends Component {
     const { mensaje } = this.props;
     return (
       <div className="container-search">
-        <label className="label-search" htmlFor="search">
-          {mensaje}
-        </label>
+          <label className="label-search" htmlFor="search">
+            {mensaje}
+          </label>
         <input
           name="search"
           className="input-search"

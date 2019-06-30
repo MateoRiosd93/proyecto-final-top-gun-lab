@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { BASE_LOCAL_ENDPOINT } from "../constants";
 import ShowPrizes from "./ShowPrizes";
 import axios from "axios";
+import DeleteMessage from "./DeleteMessage";
+import { Redirect } from "react-router-dom";
 
 import "../styles/Employee.css";
 import "../fonts/style.css";
@@ -12,13 +14,16 @@ class Employee extends Component {
     this.state = {
       prizes: [],
       employee: {
+        id:"",
         name: "",
         job: "",
         area: "",
         imgSrc: "",
         points: ""
       },
-      error: ""
+      error: "",
+      showDeleteMessage: false,
+      redirect: false
     };
   }
 
@@ -59,16 +64,45 @@ class Employee extends Component {
       });
   };
 
+  handleShowDeleteMessage = () => {
+    this.setState(prevState => ({
+      ...prevState,
+      showDeleteMessage: !prevState.showDeleteMessage
+    }));
+  };
+
+  deleteEmployee = () => {
+    const {employee:{id}} = this.state;
+    console.log(id)
+    axios.delete(`${BASE_LOCAL_ENDPOINT}employees/${id}`)
+    .then(this.setState(prevState =>({
+      ...prevState,
+      showDeleteMessage: !prevState.showDeleteMessage,
+      redirect: true
+    })))
+    .catch(err => {
+      this.setState({
+        error: err.message
+      });
+    });
+    this.handleShowDeleteMessage();
+  }
+
   componentDidMount = () => {
     this.getEmployeeID();
     this.getPrizesBD();
   };
 
   render() {
-    const { prizes } = this.state;
+    const { prizes, showDeleteMessage , redirect} = this.state;
     const { name, job, area, imgSrc, points } = this.state.employee;
     const prizesFilter = prizes.filter(prizes => prizes.points <= points);
-    const ShowPrizesFilter = prizesFilter.length === 0 ? false : true;
+    const ShowPrizesFilter = prizesFilter.length === 0? false : true;
+    if(redirect){
+      return (
+         <Redirect to="/employees"/>
+      )
+    }
     return (
       <div className="container-employee-prizes">
         <div className="container-employee">
@@ -85,10 +119,21 @@ class Employee extends Component {
             <p className="job-employee">{job}</p>
             <div className="container-butons">
               <button className="buton-employee-edit">EDIT</button>
-              <button className="buton-employee-delete">DELETE</button>
+              <button 
+                className="buton-employee-delete"
+                onClick={this.handleShowDeleteMessage}
+                >DELETE</button>
             </div>
           </div>
         </div>
+        {
+          showDeleteMessage && (
+            <DeleteMessage
+            deleteElement={this.deleteEmployee}
+            toggleModal={this.handleShowDeleteMessage}
+            />
+          )
+        }
         {ShowPrizesFilter && (
           <div className="container-prizesFilter-title">
             <h1 className="title-prizes">Available Prizes </h1>

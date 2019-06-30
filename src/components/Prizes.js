@@ -5,6 +5,7 @@ import ShowElements from "./ShowElements";
 import Search from "./Search";
 import axios from "axios";
 import ModalAppPrize from "./ModalAddPrize";
+import LoadMessage from "./LoadMessage";
 
 import "../styles/Prizes.css";
 
@@ -83,6 +84,10 @@ class Prizes extends Component {
     const prizesFilter = prizes.filter(prize =>
       prize.name.toLowerCase().includes(searchName.toLowerCase())
     );
+
+    if( prizes.length === 0 ){
+      return (<LoadMessage/>)
+    }
     return (
       <div className="container-search-prizes">
         <div className="container-search-add">
