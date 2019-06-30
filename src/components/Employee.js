@@ -145,7 +145,7 @@ class Employee extends Component {
               {points}
             </p>
           </div>
-          <div className="container-date">
+          <div className="container-date-work">
             <p className="area-employee">{area}</p>
             <p className="job-employee">{job}</p>
             <div className="container-butons">
