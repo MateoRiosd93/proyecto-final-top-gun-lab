@@ -7,6 +7,7 @@ import ModalEditAchievement from "./ModalEditAchievement";
 import DeleteMessage from "./DeleteMessage";
 import ModalAddAchievement from "./ModalAddAchievement";
 import "../styles/Achievements.css";
+import LoadMessage from "./LoadMessage";
 
 class Achievements extends Component {
   state = {
@@ -97,7 +98,6 @@ class Achievements extends Component {
       .delete(`${BASE_LOCAL_ENDPOINT}achievements/${id}`)
       .then(() => {
         this.getAchievementsBD();
-        console.log("achievement eliminado");
       })
       .catch(err => {
         this.setState({
@@ -152,6 +152,10 @@ class Achievements extends Component {
       achievement.name.toLowerCase().includes(searchName.toLowerCase())
     );
 
+    if( achievements.length === 0 ){
+      return (<LoadMessage/>)
+    }
+
     return (
       <div className="container-achievements">
         <div className="container-search-add">
@@ -177,8 +181,8 @@ class Achievements extends Component {
         )}
         {showDeleteMessage && (
           <DeleteMessage
-            handleShowDeleteMessage={this.handleShowDeleteMessage}
-            deleteAchievement={this.deleteAchievement}
+            toggleModal={this.handleShowDeleteMessage}
+            deleteElement={this.deleteAchievement}
           />
         )}
         <ul className="list-achievements">
