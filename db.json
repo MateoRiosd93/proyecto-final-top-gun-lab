@@ -1,26 +1,6 @@
 {
   "employees": [
     {
-      "id": 1,
-      "name": "elliot watts",
-      "job": "Bussiness Representative",
-      "area": "Development",
-      "imgSrc": "https://randomuser.me/api/portraits/men/36.jpg",
-      "points": 9,
-      "created_at": "2019-06-29T17:40:28.295Z",
-      "updated_at": "2019-06-29T17:40:28.295Z"
-    },
-    {
-      "id": 2,
-      "name": "freddie jenkins",
-      "job": "Bussiness Representative",
-      "area": "Sales",
-      "imgSrc": "https://randomuser.me/api/portraits/men/53.jpg",
-      "points": 9,
-      "created_at": "2019-06-29T17:40:28.300Z",
-      "updated_at": "2019-06-29T17:40:28.300Z"
-    },
-    {
       "id": 3,
       "name": "amelia lavoie",
       "job": "Bussiness Analist",
@@ -51,56 +31,6 @@
       "updated_at": "2019-06-29T17:40:28.316Z"
     },
     {
-      "id": 6,
-      "name": "elmer williams",
-      "job": "Back End Developer",
-      "area": "Marketing",
-      "imgSrc": "https://randomuser.me/api/portraits/men/21.jpg",
-      "points": 4,
-      "created_at": "2019-06-29T17:40:28.322Z",
-      "updated_at": "2019-06-29T17:40:28.322Z"
-    },
-    {
-      "id": 7,
-      "name": "mercedes gomez",
-      "job": "Bussiness Representative",
-      "area": "English",
-      "imgSrc": "https://randomuser.me/api/portraits/women/6.jpg",
-      "points": 4,
-      "created_at": "2019-06-29T17:40:28.327Z",
-      "updated_at": "2019-06-29T17:40:28.327Z"
-    },
-    {
-      "id": 8,
-      "name": "freja møller",
-      "job": "Back End Developer",
-      "area": "Marketing",
-      "imgSrc": "https://randomuser.me/api/portraits/women/54.jpg",
-      "points": 4,
-      "created_at": "2019-06-29T17:40:28.332Z",
-      "updated_at": "2019-06-29T17:40:28.332Z"
-    },
-    {
-      "id": 9,
-      "name": "veera huhta",
-      "job": "Bussiness Representative",
-      "area": "Sales",
-      "imgSrc": "https://randomuser.me/api/portraits/women/79.jpg",
-      "points": 8,
-      "created_at": "2019-06-29T17:40:28.338Z",
-      "updated_at": "2019-06-29T17:40:28.338Z"
-    },
-    {
-      "id": 10,
-      "name": "Adrian Serna",
-      "job": "Recruiter",
-      "area": "Sales",
-      "imgSrc": "https://randomuser.me/api/portraits/men/39.jpg",
-      "points": 8,
-      "created_at": "2019-06-29T17:40:28.343Z",
-      "updated_at": "2019-06-29T17:40:28.343Z"
-    },
-    {
       "id": 11,
       "name": "kurt hernandez",
       "job": "Full Stack Developer",
@@ -109,16 +39,6 @@
       "points": 5,
       "created_at": "2019-06-29T17:40:28.348Z",
       "updated_at": "2019-06-29T17:40:28.348Z"
-    },
-    {
-      "id": 12,
-      "name": "yoëlla balfoort",
-      "job": "QA",
-      "area": "Sales",
-      "imgSrc": "https://randomuser.me/api/portraits/women/8.jpg",
-      "points": 5,
-      "created_at": "2019-06-29T17:40:28.353Z",
-      "updated_at": "2019-06-29T17:40:28.353Z"
     },
     {
       "id": 13,
@@ -151,34 +71,14 @@
       "updated_at": "2019-06-29T17:40:28.369Z"
     },
     {
-      "id": 16,
-      "name": "hola",
-      "job": "fdf",
-      "area": "dfd",
-      "imgSrc": "dws",
-      "points": 15,
-      "created_at": "2019-06-29T18:40:27.758Z",
-      "updated_at": "2019-06-29T18:40:27.758Z"
-    },
-    {
-      "id": 18,
-      "name": "Nathalia",
-      "job": "Developer",
-      "area": "TI",
-      "imgSrc": "https://scontent.feoh1-1.fna.fbcdn.net/v/t1.0-9/25396212_1696987576988151_6939293396054087786_n.jpg?_nc_cat=108&_nc_oc=AQlOuTigU8-wWFKdrMMdyln76CXk4jwzzgN1amvwICCnbfSix-TAoThAR0WpA4GKVbE&_nc_ht=scontent.feoh1-1.fna&oh=6054cf72bc3bb3e91ed86247e7016901&oe=5DB7620F",
-      "points": 8,
-      "created_at": "2019-06-30T02:03:47.583Z",
-      "updated_at": "2019-06-30T02:03:47.583Z"
-    },
-    {
-      "id": 19,
-      "name": "Daniel Preciado",
-      "job": "Developer",
-      "area": "TI",
-      "imgSrc": "https://scontent.feoh1-1.fna.fbcdn.net/v/t1.0-9/62014032_2540606922617061_6365258841113755648_n.jpg?_nc_cat=101&_nc_oc=AQlIGdqMv6sa2A2efi8s7sOZ5CxmGjd2BuHq2kvuQc7gAxrp_iLnieRogAOdE8LkrJE&_nc_ht=scontent.feoh1-1.fna&oh=f334e34518760a5716c07f48ebf78ea1&oe=5D854F74",
-      "points": 8,
-      "created_at": "2019-06-30T02:04:36.870Z",
-      "updated_at": "2019-06-30T02:04:36.870Z"
+      "id": 1,
+      "name": "elliot watts",
+      "job": "Bussiness Representative",
+      "area": "Development",
+      "imgSrc": "https://randomuser.me/api/portraits/men/36.jpg",
+      "points": 9,
+      "created_at": "2019-06-29T17:40:28.295Z",
+      "updated_at": "2019-06-30T18:15:37.039Z"
     }
   ],
   "prizes": [
@@ -211,11 +111,11 @@
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis iusto voluptas earum maiores quisquam ipsum"
     },
     {
-      "id": 5,
-      "name": "Kindle",
-      "points": 5,
-      "imgSrc": "https://top-gun-lab-images.s3-sa-east-1.amazonaws.com/kindle.png",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis iusto voluptas earum maiores quisquam ipsum"
+      "name": " Iphone X",
+      "points": "25",
+      "imgSrc": "https://www.tofmondello.it/wp-content/uploads/2019/01/leather-x.jpg",
+      "description": "",
+      "id": 5
     },
     {
       "id": 6,

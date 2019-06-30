@@ -18,7 +18,7 @@ export default class ModalAddAchievement extends Component {
             [keyText]: value
           }
         }));
-      };
+    };
 
 
       createAchievement = e => {

@@ -15,7 +15,8 @@ class Employees extends Component {
     isLoad: false,
     searchName: "",
     showModal: false,
-    createEmployeeError: false
+    createEmployeeError: false,
+    redirectTest: false
   };
 
   getEmployeesBD = () => {
@@ -29,6 +30,7 @@ class Employees extends Component {
           employees,
           createEmployeeError: false
         });
+        console.log(employees);
       })
       .catch(error => {
         this.setState({
@@ -83,10 +85,12 @@ class Employees extends Component {
   };
 
   render() {
-    const { employees, searchName, showModal } = this.state;
+    const { employees, searchName, showModal, redirectTest } = this.state;
     const employeesFilter = employees.filter(employee =>
       employee.name.toLowerCase().includes(searchName.toLowerCase())
     );
+
+    console.log(redirectTest);
 
     if( employees.length === 0 ){
       return (<LoadMessage/>)

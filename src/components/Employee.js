@@ -4,6 +4,7 @@ import ShowPrizes from "./ShowPrizes";
 import axios from "axios";
 import DeleteMessage from "./DeleteMessage";
 import { Redirect } from "react-router-dom";
+import ModalEditEmployee from "./ModalEditEmployee";
 
 import "../styles/Employee.css";
 import "../fonts/style.css";
@@ -23,6 +24,7 @@ class Employee extends Component {
       },
       error: "",
       showDeleteMessage: false,
+      showEditModal: false,
       redirect: false
     };
   }
@@ -75,7 +77,8 @@ class Employee extends Component {
     const {employee:{id}} = this.state;
     console.log(id)
     axios.delete(`${BASE_LOCAL_ENDPOINT}employees/${id}`)
-    .then(this.setState(prevState =>({
+    .then(
+      this.setState(prevState =>({
       ...prevState,
       showDeleteMessage: !prevState.showDeleteMessage,
       redirect: true
@@ -85,7 +88,37 @@ class Employee extends Component {
         error: err.message
       });
     });
-    this.handleShowDeleteMessage();
+  }
+
+  handleShowEditModal = () => {
+    this.setState(prevState => ({
+      ...prevState,
+      showEditModal: !prevState.showEditModal
+    }));
+  }
+
+  editEmployee = employee =>{
+    const {employee:{id}} = this.state;
+    const {name,
+      job,
+      area,
+      imgSrc,
+      points} = employee
+    axios.put(`${BASE_LOCAL_ENDPOINT}employees/${id}`,
+    {
+      name,
+      job,
+      area,
+      imgSrc,
+      points
+    }
+    ).then(()=> this.getEmployeeID())
+    .catch(error => {
+      this.setState({
+        error: error.message
+      });
+    });
+    this.handleShowEditModal();
   }
 
   componentDidMount = () => {
@@ -94,17 +127,15 @@ class Employee extends Component {
   };
 
   render() {
-    const { prizes, showDeleteMessage , redirect} = this.state;
+    const { prizes, showDeleteMessage , showEditModal , redirect} = this.state;
     const { name, job, area, imgSrc, points } = this.state.employee;
     const prizesFilter = prizes.filter(prizes => prizes.points <= points);
     const ShowPrizesFilter = prizesFilter.length === 0? false : true;
-    if(redirect){
-      return (
-         <Redirect to="/employees"/>
-      )
-    }
     return (
       <div className="container-employee-prizes">
+        {
+          redirect && <Redirect to="/employees"/>
+        }
         <div className="container-employee">
           <div className="container-date">
             <h1 className="name-employee">{name}</h1>
@@ -118,7 +149,9 @@ class Employee extends Component {
             <p className="area-employee">{area}</p>
             <p className="job-employee">{job}</p>
             <div className="container-butons">
-              <button className="buton-employee-edit">EDIT</button>
+              <button className="buton-employee-edit"
+              onClick={this.handleShowEditModal}
+              >EDIT</button>
               <button 
                 className="buton-employee-delete"
                 onClick={this.handleShowDeleteMessage}
@@ -126,6 +159,16 @@ class Employee extends Component {
             </div>
           </div>
         </div>
+      {
+        showEditModal && ( 
+          <ModalEditEmployee
+          handleShowEditModal={this.handleShowEditModal}
+          editEmployee={this.editEmployee}
+          />
+
+        )
+      }
+
         {
           showDeleteMessage && (
             <DeleteMessage

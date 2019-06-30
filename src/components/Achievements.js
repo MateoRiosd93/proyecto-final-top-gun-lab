@@ -56,9 +56,6 @@ class Achievements extends Component {
   editAchievement = (name, points) => {
     const id = this.state.idAchievement;
 
-    console.log("Componente Achievement");
-    console.log(`name ${name}, points ${points}, id ${id}`);
-
     axios
       .put(
         `${BASE_LOCAL_ENDPOINT}achievements/${id}`,
