@@ -112,9 +112,9 @@ class Employees extends Component {
             />
           )}
           {employeesFilter.map(({ id, name, imgSrc, points }) => (
-            <NavLink 
-              key={id} 
-              to={`/employees/${id}`} 
+            <NavLink
+              key={id}
+              to={`/employees/${id}`}
               className="employee-link"
             >
               <ShowElements
