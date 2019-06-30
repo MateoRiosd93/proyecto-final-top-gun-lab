@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { HashRouter, Route, Switch, Redirect} from 'react-router-dom';
-import { createBrowserHistory } from "hi"
 import Header from './components/Header';
 import Employees from './components/Employees';
 import Employee from './components/Employee';
