@@ -19,11 +19,6 @@ body{
 	width: 100%;
 }
 
-.container-app{
-	padding-top: 35px;
-}
-
-
 :root{
 	--purpleColor: #8941C4;
 	--greenColor : #62E52C;
@@ -37,5 +32,8 @@ body{
 	--font: 'Open Sans', sans-serif;
 }
 
+.container-app{
+	padding-top: 35px;
+}
 
 
