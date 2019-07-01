@@ -2,17 +2,38 @@
 	box-sizing: border-box;
 }
 
-html, body{
-	width: 100%;
+html{
+	margin: 2rem 0 0 0;
+}
+
+body{
+	margin: 2rem 0 0 0;
 	height: 100vh;
-  	margin: 0;
-	  padding: 0;
+	padding: 0;
+	overflow-x: hidden;
+	background-image: url(../assets/TEAM.PNG);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	width: 100%;
 }
 
 :root{
-
+	--purpleColor: #8941C4;
 	--greenColor : #62E52C;
 	--grayColor: #253746;
+	--orangeColor: #f67b27;
+	--yellowColor:#FECD00;
+	--blueColor: #22A6F5;
+	--bluelightColor: #2BDDD7;
+	--pinkColor: #E32E7F;
 
 	--font: 'Open Sans', sans-serif;
 }
+
+.container-app{
+	padding-top: 35px;
+}
+
+

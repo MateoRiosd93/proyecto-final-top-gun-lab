@@ -1,10 +1,15 @@
 .navbar{
+    margin: 0;
     padding: 0.6rem;
     background:#253746;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    position:fixed;
+    z-index: 15;
+    top: 0;
 }
+
 
 .nav_list{
     list-style: none;
@@ -31,3 +36,6 @@
     border: 1px solid white;
 }
 
+.active{
+    color: #62E52C;
+}

@@ -1,0 +1,154 @@
+.container-footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--grayColor);
+    position: absolute;
+}
+
+.container-info{
+    margin: 2.5rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.info{
+    font-family: var(--font);
+}
+
+.container-lenguage-follow{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: var(--font);
+}
+
+.title-info{
+    font-size: 14px;
+    font-weight: bolder;
+    color: var(--greenColor);
+}
+
+.text-info{
+    margin: 1rem 0;
+    color: white;
+    font-size: 13px;
+}
+
+.text-info-link{
+    display: block;
+    margin: 1rem 0;
+    color: white;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.text-info-link:hover{
+    color: rgba(158, 164, 168, 0.9);
+}
+
+.text-contact{
+    margin: 0;
+    font-size: 13px;
+    color: white;
+}
+
+.text-contact-mg{
+    margin: 0 0 2rem 0;
+    font-size: 13px;
+    color: white;
+}
+
+.text-contact-bold{
+    margin: 0;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+}
+
+.contact-num{
+    margin: 0;
+    font-size: 13px;
+    font-weight: bolder;
+    color: #22A6F5;
+}
+
+.container-copyright-img{
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font);
+}
+
+.container-copyright{
+    margin-left: 3.6rem;
+}
+
+.barra{
+     color: white;
+     font-weight: bold;
+}
+.text-info-privacy{
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.container-button{
+    width: 50px;
+    position: relative;
+    margin-right: 1.6rem;
+}
+
+
+.container-button::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 20px;
+    left: 15px;
+    box-shadow: 3px 3px var(--greenColor);
+    transform: rotate(225deg);
+}
+
+.icon-follow{
+    text-decoration: none;
+    margin-right: 1.5rem;
+    color: white;
+    font-size: 20px;
+}
+
+.icon-follow:hover{
+    color: var(--greenColor);
+}
+
+.clutch-img{
+    margin-top: 1.5rem;
+}
+
+
+.button-footer{
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px solid var(--greenColor);
+    border-radius: 50px;
+    background: none;
+    position: relative;
+}
+
+.button-footer:hover{
+    cursor: pointer;
+}
+
+
+.button-footer:focus{
+    outline: none;
+}
+

@@ -1,0 +1,98 @@
+.container-element{
+    width: 180px;
+    height: 250px;
+    padding: 0.5rem;
+    margin: 0.8rem;
+    box-shadow: 0 0 3px 3px black;
+    border-radius: 8px;
+    background: rgba(37, 55, 70, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--font);
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1s ease;
+}
+
+.container-front{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-back{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-Team{
+    width: 30%;
+    border-radius: 8px;
+}
+
+.we-are-team{
+    font-size: 23px;
+    font-weight: 800;
+    color: white;
+}
+
+.container-front,
+.container-back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+}
+
+.container-back{
+    transform: rotateY(180deg);
+    background: rgba(98, 229, 44, 0.8);
+    border-radius: 8px;
+}
+
+.container-element:hover{
+    transform: rotateY(180deg);
+    transition: 1s;
+    box-shadow: 0 0 3px 3px white;
+}
+
+.name-element{
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+.img-element{
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 160px;
+    margin: 0.3rem;
+    border-radius: 3px;
+}
+
+.start{
+    margin-right: 0.3rem;
+    color: var(--yellowColor);
+}
+
+.points-element{
+    margin: 0;
+    text-decoration: none;
+    color: white;
+}
+
+NavLink{
+    text-decoration: none;
+}
