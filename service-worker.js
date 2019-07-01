@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/proyecto-final-top-gun-lab/precache-manifest.34360c0f806e75b1b4d6a1ea7559d551.js"
+  "/proyecto-final-top-gun-lab/precache-manifest.80f74e133f772239de0f0cd082a4c27e.js"
 );
 
 self.addEventListener('message', (event) => {
