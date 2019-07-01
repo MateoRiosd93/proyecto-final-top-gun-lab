@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import "../styles/Header.css";
 import { NavLink } from "react-router-dom";
 
@@ -30,11 +30,11 @@ const Header = () => {
         </li>
         <li className="nav_list-item">
           <NavLink
-            to="/achivements"
+            to="/achievements"
             className="nav_link"
             activeClassName="active"
           >
-            ACHIVEMENTS
+            ACHIEVEMENTS
           </NavLink>
         </li>
       </ul>

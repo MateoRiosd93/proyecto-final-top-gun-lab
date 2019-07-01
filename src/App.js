@@ -37,7 +37,7 @@ export default class App extends Component {
             <Route exact path="/employees/:id" component={Employee} />
             <Route exact path="/prizes" component={Prizes} />
             <Route exact path="/prizes/:id" component={Prize} />
-            <Route exact path="/achivements" component={Achievements} />
+            <Route exact path="/achievements" component={Achievements} />
             <Route exact path="/" render={() => <Redirect to="/employees" />} />
           </Switch>
           <Footer scrollUp={this.scrollUp} />
