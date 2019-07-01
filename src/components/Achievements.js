@@ -113,22 +113,23 @@ class Achievements extends Component {
 
   createAchievement = achievement => {
     const { name, points } = achievement;
-    axios.post(
-      `${BASE_LOCAL_ENDPOINT}achievements`,
-      {
-        name,
-        points
-      },
-      {
-        headers: { "Content-Type": "application/json" }
-      }
-    )
-    .then(() => this.getAchievementsBD())
-    .catch(err => {
-      this.setState({
-        error: err.message
+    axios
+      .post(
+        `${BASE_LOCAL_ENDPOINT}achievements`,
+        {
+          name,
+          points
+        },
+        {
+          headers: { "Content-Type": "application/json" }
+        }
+      )
+      .then(() => this.getAchievementsBD())
+      .catch(err => {
+        this.setState({
+          error: err.message
+        });
       });
-    });
 
     this.handleShowAddModal();
   };
@@ -149,8 +150,8 @@ class Achievements extends Component {
       achievement.name.toLowerCase().includes(searchName.toLowerCase())
     );
 
-    if( achievements.length === 0 ){
-      return (<LoadMessage/>)
+    if (achievements.length === 0) {
+      return <LoadMessage />;
     }
 
     return (
@@ -165,10 +166,10 @@ class Achievements extends Component {
           </button>
         </div>
         {showAddModal && (
-          <ModalAddAchievement 
-            handleShowAddModal={this.handleShowAddModal} 
+          <ModalAddAchievement
+            handleShowAddModal={this.handleShowAddModal}
             createAchievement={this.createAchievement}
-            />
+          />
         )}
         {showEditModal && (
           <ModalEditAchievement

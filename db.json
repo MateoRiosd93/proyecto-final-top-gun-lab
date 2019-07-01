@@ -1,16 +1,6 @@
 {
   "employees": [
     {
-      "id": 2,
-      "name": "freddie jenkins",
-      "job": "Bussiness Representative",
-      "area": "Sales",
-      "imgSrc": "https://randomuser.me/api/portraits/men/53.jpg",
-      "points": 9,
-      "created_at": "2019-06-30T23:13:30.967Z",
-      "updated_at": "2019-06-30T23:13:30.967Z"
-    },
-    {
       "id": 3,
       "name": "amelia lavoie",
       "job": "Bussiness Analist",
@@ -19,26 +9,6 @@
       "points": 7,
       "created_at": "2019-06-30T23:13:30.976Z",
       "updated_at": "2019-06-30T23:13:30.976Z"
-    },
-    {
-      "id": 4,
-      "name": "minea hautala",
-      "job": "Recruiter",
-      "area": "Human Resources",
-      "imgSrc": "https://randomuser.me/api/portraits/women/96.jpg",
-      "points": 1,
-      "created_at": "2019-06-30T23:13:30.985Z",
-      "updated_at": "2019-06-30T23:13:30.985Z"
-    },
-    {
-      "id": 8,
-      "name": "freja møller",
-      "job": "Back End Developer",
-      "area": "Marketing",
-      "imgSrc": "https://randomuser.me/api/portraits/women/54.jpg",
-      "points": 4,
-      "created_at": "2019-06-30T23:13:31.016Z",
-      "updated_at": "2019-06-30T23:13:31.016Z"
     },
     {
       "id": 9,
@@ -51,16 +21,6 @@
       "updated_at": "2019-06-30T23:13:31.023Z"
     },
     {
-      "id": 10,
-      "name": "Adrian Serna",
-      "job": "Recruiter",
-      "area": "Sales",
-      "imgSrc": "https://randomuser.me/api/portraits/men/39.jpg",
-      "points": 8,
-      "created_at": "2019-06-30T23:13:31.031Z",
-      "updated_at": "2019-06-30T23:13:31.031Z"
-    },
-    {
       "id": 12,
       "name": "yoëlla balfoort",
       "job": "QA",
@@ -69,16 +29,6 @@
       "points": 5,
       "created_at": "2019-06-30T23:13:31.042Z",
       "updated_at": "2019-06-30T23:13:31.042Z"
-    },
-    {
-      "id": 13,
-      "name": "fortunato nunes",
-      "job": "Operations Manager",
-      "area": "Sales",
-      "imgSrc": "https://randomuser.me/api/portraits/men/65.jpg",
-      "points": 0,
-      "created_at": "2019-06-30T23:13:31.057Z",
-      "updated_at": "2019-06-30T23:13:31.057Z"
     },
     {
       "id": 14,
@@ -102,24 +52,6 @@
     }
   ],
   "prizes": [
-    {
-      "id": 1,
-      "name": "Play Station game",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis iusto voluptas earum maiores quisquam ipsum",
-      "imgSrc": "https://top-gun-lab-images.s3-sa-east-1.amazonaws.com/steam.png",
-      "points": 1,
-      "created_at": "2019-06-30T23:13:31.106Z",
-      "updated_at": "2019-06-30T23:13:31.106Z"
-    },
-    {
-      "id": 2,
-      "name": "Spa day",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis iusto voluptas earum maiores quisquam ipsum",
-      "imgSrc": "https://top-gun-lab-images.s3-sa-east-1.amazonaws.com/spa.png",
-      "points": 1,
-      "created_at": "2019-06-30T23:13:31.115Z",
-      "updated_at": "2019-06-30T23:13:31.115Z"
-    },
     {
       "id": 3,
       "name": "Earbugs",
@@ -155,15 +87,6 @@
       "points": 8,
       "created_at": "2019-06-30T23:13:31.148Z",
       "updated_at": "2019-06-30T23:13:31.148Z"
-    },
-    {
-      "id": 7,
-      "name": "Watch",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis iusto voluptas earum maiores quisquam ipsum",
-      "imgSrc": "https://top-gun-lab-images.s3-sa-east-1.amazonaws.com/watch.png",
-      "points": 8,
-      "created_at": "2019-06-30T23:13:31.155Z",
-      "updated_at": "2019-06-30T23:13:31.155Z"
     }
   ],
   "achievements": [
