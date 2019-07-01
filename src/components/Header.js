@@ -34,7 +34,7 @@ const Header = () => {
             className="nav_link"
             activeClassName="active"
           >
-            ACHIVEMENTS
+            ACHIEVEMENTS
           </NavLink>
         </li>
       </ul>
