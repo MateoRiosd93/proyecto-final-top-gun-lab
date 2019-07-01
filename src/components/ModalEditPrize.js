@@ -34,7 +34,7 @@ export default class ModalEditPrize extends Component {
             <div className="modal">
             <div className="modal-container modal-achievement">
               <form action="" className="modal-form form-achievement" onSubmit={this.editPrize}>
-                    <h2 className="title-achievement">You are Editting an Employee!</h2>
+                    <h2 className="title-achievement">You are Editing an Prize!</h2>
                 <div className="modal-field-container">
                   <label>
                     Name <span>*</span>

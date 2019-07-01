@@ -29,6 +29,11 @@ class Employee extends Component {
     };
   }
 
+  componentDidMount = () => {
+    this.getEmployeeID();
+    this.getPrizesBD();
+  };
+
   getPrizesBD = () => {
     axios
       .get(`${BASE_LOCAL_ENDPOINT}prizes`)
@@ -78,16 +83,16 @@ class Employee extends Component {
     console.log(id)
     axios.delete(`${BASE_LOCAL_ENDPOINT}employees/${id}`)
     .then(
-      this.setState(prevState =>({
-      ...prevState,
-      showDeleteMessage: !prevState.showDeleteMessage,
+      this.setState({
       redirect: true
-    })))
+    })
+    )
     .catch(err => {
       this.setState({
         error: err.message
       });
     });
+    this.handleShowDeleteMessage();
   }
 
   handleShowEditModal = () => {
@@ -121,25 +126,19 @@ class Employee extends Component {
     this.handleShowEditModal();
   }
 
-  componentDidMount = () => {
-    this.getEmployeeID();
-    this.getPrizesBD();
-  };
 
   render() {
     const { prizes, showDeleteMessage , showEditModal , redirect} = this.state;
     const { name, job, area, imgSrc, points } = this.state.employee;
     const prizesFilter = prizes.filter(prizes => prizes.points <= points);
     const ShowPrizesFilter = prizesFilter.length === 0? false : true;
+    const {from} = this.props.location.state || '/'
     return (
       <div className="container-employee-prizes">
-        {
-          redirect && <Redirect to="/employees"/>
-        }
         <div className="container-employee">
           <div className="container-date">
             <h1 className="name-employee">{name}</h1>
-            <img className="img-employee" src={imgSrc} alt="" />
+            <img className="img-employee" src={imgSrc} alt="employee"/>
             <p className="points-employee">
               <span className="start icon-star-full" />
               {points}
@@ -193,6 +192,9 @@ class Employee extends Component {
             </div>
           </div>
         )}
+        {
+          redirect && (<Redirect to={from || '/employees'}/>)
+        }
       </div>
     );
   }

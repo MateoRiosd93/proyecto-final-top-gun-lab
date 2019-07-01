@@ -15,8 +15,7 @@ class Employees extends Component {
     isLoad: false,
     searchName: "",
     showModal: false,
-    createEmployeeError: false,
-    redirectTest: false
+    createEmployeeError: false
   };
 
   getEmployeesBD = () => {
@@ -30,7 +29,6 @@ class Employees extends Component {
           employees,
           createEmployeeError: false
         });
-        console.log(employees);
       })
       .catch(error => {
         this.setState({
@@ -39,9 +37,7 @@ class Employees extends Component {
       });
   };
 
-  componentDidMount() {
-    this.getEmployeesBD();
-  }
+  
 
   searchNames = letter => {
     const searchName = letter;
@@ -59,7 +55,6 @@ class Employees extends Component {
 
   createEmployee = (e, employee) => {
     const { name, job, area, points, imgSrc } = employee;
-    console.log(employee);
     axios
       .post(
         `${BASE_LOCAL_ENDPOINT}employees`,
@@ -84,13 +79,17 @@ class Employees extends Component {
     this.handleShowModal(e);
   };
 
+  componentDidMount() {
+    this.getEmployeesBD();
+    console.log('did mount')
+    console.log(this.state.employees);
+  }
+
   render() {
-    const { employees, searchName, showModal, redirectTest } = this.state;
+    const { employees, searchName, showModal } = this.state;
     const employeesFilter = employees.filter(employee =>
       employee.name.toLowerCase().includes(searchName.toLowerCase())
     );
-
-    console.log(redirectTest);
 
     if( employees.length === 0 ){
       return (<LoadMessage/>)

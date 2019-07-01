@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import "../styles/ModalEditEmployee.css"
 
 export default class ModalEditEmployee extends Component {
 
@@ -34,9 +35,9 @@ export default class ModalEditEmployee extends Component {
     render() {
         return (
             <div className="modal">
-            <div className="modal-container modal-achievement">
+            <div className="modal-container modal-employee">
               <form action="" className="modal-form form-achievement" onSubmit={this.editEmployee}>
-                    <h2 className="title-achievement">You are Editting an Employee!</h2>
+                    <h2 className="title-achievement">You are Editing an Employee!</h2>
                 <div className="modal-field-container">
                   <label>
                     Name <span>*</span>

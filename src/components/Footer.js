@@ -4,7 +4,8 @@ import "../styles/Footer.css";
 import "../fonts/style.css";
 import clutch from "../assets/Clutch.png";
 
-function Footer() {
+function Footer({scrollUp}) {
+
   return (
     <div className="container-footer">
       <div className="container-info">
@@ -188,7 +189,7 @@ function Footer() {
           </a>
         </div>
         <div className="container-button">
-          <button className="button-footer" />
+          <button className="button-footer" onClick={scrollUp}/>
         </div>
       </div>
     </div>

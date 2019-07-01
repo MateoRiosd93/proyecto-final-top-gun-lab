@@ -44,7 +44,7 @@ export default class ModalEditAchievement extends Component {
       <div className="modal">
         <div className="modal-container modal-achievement">
           <form action="" className="modal-form form-achievement" onSubmit={this.editAchievement}>
-                <h2 className="title-achievement">You are Editting an Achievement!</h2>
+                <h2 className="title-achievement">You are Editing an Achievement!</h2>
             <div className="modal-field-container">
               <label>
                 Name <span>*</span>

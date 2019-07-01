@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import { BASE_LOCAL_ENDPOINT } from "../constants";
 import axios from "axios";
 import ModalEditPrize from "./ModalEditPrize";
-
+import { Redirect } from "react-router-dom";
+import DeleteMessage from "./DeleteMessage";
 import "../styles/Prize.css";
+
 
 class Prize extends Component {
   constructor(props) {
@@ -17,7 +19,9 @@ class Prize extends Component {
         description: ""
       },
       error: "",
-      showEditModal: false
+      showEditModal: false,
+      showDeleteModal: false,
+      redirect: false
     };
   }
 
@@ -75,6 +79,29 @@ class Prize extends Component {
       this.handlerShowEditModal();
   }
 
+  handlerShowDeleteModal = () => {
+    this.setState(prevState => ({
+      ...prevState,
+      showDeleteModal: !prevState.showDeleteModal
+    }));
+  }
+
+  deletePrize = prize => {
+    const {prize:{id}} =this.state;
+
+    axios.delete(`${BASE_LOCAL_ENDPOINT}prizes/${id}`)
+    .then(this.setState(prevState => ({
+      ...prevState,
+      showDeleteModal: ! prevState.showDeleteModal,
+      redirect: true
+    })))
+    .catch(err => {
+      this.setState({
+        error: err.message
+      });
+    });
+  }
+
   componentDidMount = () => {
     this.getPrizeID();
   };
@@ -82,14 +109,24 @@ class Prize extends Component {
 
   render() {
     const { name, points, imgSrc, description } = this.state.prize;
-    const { showEditModal } = this.state;
+    const { showEditModal, redirect, showDeleteModal } = this.state;
     return (
       <div className="container-prize-detail">
+        {
+          redirect && (<Redirect push to="/prizes"/>)
+        }
         {
           showEditModal &&  (
             <ModalEditPrize 
             handlerShowEditModal={this.handlerShowEditModal}
             editPrize={this.editPrize}
+            />)
+        }
+        {
+          showDeleteModal && (
+            <DeleteMessage
+            toggleModal={this.handlerShowDeleteModal}
+            deleteElement={this.deletePrize}
             />)
         }
         <h1 className="name-prize-detail"> {name} </h1>
@@ -104,7 +141,10 @@ class Prize extends Component {
             className="buton-prize-edit"
             onClick={this.handlerShowEditModal}
           >EDIT</button>
-          <button className="buton-prize-delete">DELETE</button>
+          <button 
+            className="buton-prize-delete"
+            onClick={this.handlerShowDeleteModal}
+            >DELETE</button>
         </div>
       </div>
     );

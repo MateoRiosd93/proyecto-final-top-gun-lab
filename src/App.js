@@ -12,6 +12,22 @@ import './styles/App.css';
 
 export default class App extends Component {
 
+  state = {
+    intervalId: 0
+  };
+
+  scrollUp = () => {
+    let intervalId = setInterval(this.scrollStep, 16);
+    this.setState({ intervalId });
+  };
+
+  scrollStep = () => {
+    if (window.pageYOffset === 0) {
+      clearInterval(this.state.intervalId);
+    }
+    window.scroll(0, window.pageYOffset - 50);
+  };
+
   render() {
     return (
       <div className="container-app">
@@ -27,7 +43,7 @@ export default class App extends Component {
                                   <Redirect to="/employees"/>
             )}/>
           </Switch>
-          <Footer/>
+          <Footer scrollUp={this.scrollUp}/>
         </HashRouter>
       </div>
     );
