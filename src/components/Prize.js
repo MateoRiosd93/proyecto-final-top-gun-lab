@@ -6,13 +6,12 @@ import { Redirect } from "react-router-dom";
 import DeleteMessage from "./DeleteMessage";
 import "../styles/Prize.css";
 
-
 class Prize extends Component {
   constructor(props) {
     super(props);
     this.state = {
       prize: {
-        id:"",
+        id: "",
         name: "",
         points: "",
         imgSrc: "",
@@ -46,89 +45,80 @@ class Prize extends Component {
         });
       });
   };
-  
+
   handlerShowEditModal = () => {
     this.setState(prevState => ({
       ...prevState,
       showEditModal: !prevState.showEditModal
     }));
-  }
+  };
 
   editPrize = prize => {
-    const {prize:{id}} =this.state;
+    const {
+      prize: { id }
+    } = this.state;
 
-    const {name,
-      points,
-      imgSrc,
-      description} = prize;
+    const { name, points, imgSrc, description } = prize;
 
-      axios.put(`${BASE_LOCAL_ENDPOINT}prizes/${id}`,
-      {
+    axios
+      .put(`${BASE_LOCAL_ENDPOINT}prizes/${id}`, {
         name,
         points,
         imgSrc,
         description
-      }
-      )
+      })
       .then(() => this.getPrizeID())
       .catch(error => {
         this.setState({
           error: error.message
         });
       });
-      this.handlerShowEditModal();
-  }
+    this.handlerShowEditModal();
+  };
 
   handlerShowDeleteModal = () => {
     this.setState(prevState => ({
       ...prevState,
       showDeleteModal: !prevState.showDeleteModal
     }));
-  }
+  };
 
-  deletePrize = prize => {
-    const {prize:{id}} =this.state;
+  deletePrize = async () => {
+    const {
+      prize: { id }
+    } = this.state;
 
-    axios.delete(`${BASE_LOCAL_ENDPOINT}prizes/${id}`)
-    .then(this.setState(prevState => ({
-      ...prevState,
-      showDeleteModal: ! prevState.showDeleteModal,
-      redirect: true
-    })))
-    .catch(err => {
+    try {
+      await axios.delete(`${BASE_LOCAL_ENDPOINT}prizes/${id}`);
+      this.props.history.push("/prizes");
+    } catch (error) {
       this.setState({
-        error: err.message
+        error: error.message
       });
-    });
-  }
+    }
+  };
 
   componentDidMount = () => {
     this.getPrizeID();
   };
-
 
   render() {
     const { name, points, imgSrc, description } = this.state.prize;
     const { showEditModal, redirect, showDeleteModal } = this.state;
     return (
       <div className="container-prize-detail">
-        {
-          redirect && (<Redirect push to="/prizes"/>)
-        }
-        {
-          showEditModal &&  (
-            <ModalEditPrize 
+        {showEditModal && (
+          <ModalEditPrize
             handlerShowEditModal={this.handlerShowEditModal}
             editPrize={this.editPrize}
-            />)
-        }
-        {
-          showDeleteModal && (
-            <DeleteMessage
+          />
+        )}
+        {showDeleteModal && (
+          <DeleteMessage
             toggleModal={this.handlerShowDeleteModal}
             deleteElement={this.deletePrize}
-            />)
-        }
+          />
+        )}
         <h1 className="name-prize-detail"> {name} </h1>
         <img className="img-prize-detail" src={imgSrc} alt="" />
         <p className="description-prize-detaeil"> {description} </p>
@@ -137,15 +127,20 @@ class Prize extends Component {
           {points}
         </span>
         <div className="container-butons-prize">
-          <button 
+          <button
             className="buton-prize-edit"
             onClick={this.handlerShowEditModal}
-          >EDIT</button>
-          <button 
+          >
+            EDIT
+          </button>
+          <button
             className="buton-prize-delete"
             onClick={this.handlerShowDeleteModal}
-            >DELETE</button>
+          >
+            DELETE
+          </button>
         </div>
+        {redirect && <Redirect push to="/prizes" />}
       </div>
     );
   }
